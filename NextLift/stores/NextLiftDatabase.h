@@ -11,6 +11,4 @@
 
 @interface NextLiftDatabase : NSObject
 
-- (instancetype)init;
-
 @end
