@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "NextLiftDatabaseFactory.h"
+#import "ExerciseModel.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // Just here while testing
+    NextLiftDatabase *db = [NextLiftDatabaseFactory getInstance];
+
+    ExerciseModel *em = [[ExerciseModel alloc] initWithName:@"Bicep Curl" bodypart:@"Arms"];
+
+    NSLog(@"%@", [db addExercise:em]);
     return YES;
 }
 

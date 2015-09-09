@@ -7,23 +7,22 @@
 //
 
 #import "NextLiftDatabase.h"
+#import "ExerciseModel.h"
 
-NSString* const DATABASE_NAME = @"nextlift";
+NSString *const DATABASE_NAME = @"nextlift";
 
 CBLDatabase *db;
 
 @implementation NextLiftDatabase
 
-- (instancetype)init
-{
-    if(self = [super init]){
+- (instancetype)init {
+    if (self = [super init]) {
         [self initialiseDatabase];
     }
     return self;
 }
 
-- (void)initialiseDatabase
-{
+- (void)initialiseDatabase {
     NSError *error;
 
     CBLManager *manager = [CBLManager sharedInstance];
@@ -32,5 +31,28 @@ CBLDatabase *db;
         NSLog(@"Error getting Databse, message %@", error.localizedDescription);
     }
 }
+
+- (NSString *)addExercise:(ExerciseModel *)exerciseModel {
+
+    NSError *error;
+
+    CBLDocument *doc = [db createDocument];
+
+    NSDictionary *exDict = @{@"name" : exerciseModel.name, @"bodypart" : exerciseModel.bodypart};
+
+    CBLRevision *revision = [doc putProperties:exDict error:&error];
+
+    if (!revision) {
+        NSLog(@"Unable to write document to database, Error: %@", error.localizedDescription);
+        return nil;
+    }
+
+    return doc.documentID;
+}
+
+- (NSArray *)getAllExercises {
+    return nil;
+}
+
 
 @end

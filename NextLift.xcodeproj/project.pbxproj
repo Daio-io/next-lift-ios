@@ -17,6 +17,7 @@
 		6D7217C990EC6EC9258F82DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9241613C211B28BF8D14E4 /* libPods.a */; };
 		BA88B80C5A375A9C83BB645A /* NextLiftDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B6C254DF17ACC2A49F68 /* NextLiftDatabase.m */; };
 		BA88BAD6B05A8BE6D8B7BE8B /* NextLiftDatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B4D2D11467391AFF8137 /* NextLiftDatabaseFactory.m */; };
+		BA88BB19AF3DD39F9846398E /* ExerciseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BFFA68CC5FF3B699AE9C /* ExerciseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,9 @@
 		BA88B0FF09B7A5505899DD9B /* NextLiftDatabaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextLiftDatabaseFactory.h; path = stores/NextLiftDatabaseFactory.h; sourceTree = "<group>"; };
 		BA88B155E3002AEC33D1715F /* NextLiftDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextLiftDatabase.h; path = stores/NextLiftDatabase.h; sourceTree = "<group>"; };
 		BA88B4D2D11467391AFF8137 /* NextLiftDatabaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextLiftDatabaseFactory.m; path = stores/NextLiftDatabaseFactory.m; sourceTree = "<group>"; };
+		BA88B6278B9C8F2B307E7EF4 /* ExerciseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExerciseModel.h; path = models/ExerciseModel.h; sourceTree = "<group>"; };
 		BA88B6C254DF17ACC2A49F68 /* NextLiftDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextLiftDatabase.m; path = stores/NextLiftDatabase.m; sourceTree = "<group>"; };
+		BA88BFFA68CC5FF3B699AE9C /* ExerciseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExerciseModel.m; path = models/ExerciseModel.m; sourceTree = "<group>"; };
 		CF9241613C211B28BF8D14E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +119,8 @@
 				BA88B155E3002AEC33D1715F /* NextLiftDatabase.h */,
 				BA88B4D2D11467391AFF8137 /* NextLiftDatabaseFactory.m */,
 				BA88B0FF09B7A5505899DD9B /* NextLiftDatabaseFactory.h */,
+				BA88B6278B9C8F2B307E7EF4 /* ExerciseModel.h */,
+				BA88BFFA68CC5FF3B699AE9C /* ExerciseModel.m */,
 			);
 			path = NextLift;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				576B40011B9F953400B9D296 /* main.m in Sources */,
 				BA88B80C5A375A9C83BB645A /* NextLiftDatabase.m in Sources */,
 				BA88BAD6B05A8BE6D8B7BE8B /* NextLiftDatabaseFactory.m in Sources */,
+				BA88BB19AF3DD39F9846398E /* ExerciseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "CouchbaseLite/CouchbaseLite.h"
 
+@class ExerciseModel;
+
 @interface NextLiftDatabase : NSObject
+
+- (NSString *)addExercise:(ExerciseModel *)exerciseModel;
+- (NSArray *)getAllExercises;
 
 @end
