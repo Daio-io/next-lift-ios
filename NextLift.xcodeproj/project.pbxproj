@@ -14,8 +14,9 @@
 		576B400C1B9F953400B9D296 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576B400B1B9F953400B9D296 /* Images.xcassets */; };
 		576B400F1B9F953400B9D296 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576B400D1B9F953400B9D296 /* LaunchScreen.xib */; };
 		576B401B1B9F953400B9D296 /* NextLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B401A1B9F953400B9D296 /* NextLiftTests.m */; };
-		57DE91261B9FA565009837A3 /* DatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DE91251B9FA565009837A3 /* DatabaseService.m */; };
 		6D7217C990EC6EC9258F82DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9241613C211B28BF8D14E4 /* libPods.a */; };
+		BA88B80C5A375A9C83BB645A /* NextLiftDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B6C254DF17ACC2A49F68 /* NextLiftDatabase.m */; };
+		BA88BAD6B05A8BE6D8B7BE8B /* NextLiftDatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B4D2D11467391AFF8137 /* NextLiftDatabaseFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +43,12 @@
 		576B40141B9F953400B9D296 /* NextLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		576B40191B9F953400B9D296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576B401A1B9F953400B9D296 /* NextLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextLiftTests.m; sourceTree = "<group>"; };
-		57DE91241B9FA565009837A3 /* DatabaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseService.h; sourceTree = "<group>"; };
-		57DE91251B9FA565009837A3 /* DatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseService.m; sourceTree = "<group>"; };
 		6058FAF29D7829664B0D844C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		98309EBDAE26E0F0A112B016 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BA88B0FF09B7A5505899DD9B /* NextLiftDatabaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextLiftDatabaseFactory.h; path = stores/NextLiftDatabaseFactory.h; sourceTree = "<group>"; };
+		BA88B155E3002AEC33D1715F /* NextLiftDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextLiftDatabase.h; path = stores/NextLiftDatabase.h; sourceTree = "<group>"; };
+		BA88B4D2D11467391AFF8137 /* NextLiftDatabaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextLiftDatabaseFactory.m; path = stores/NextLiftDatabaseFactory.m; sourceTree = "<group>"; };
+		BA88B6C254DF17ACC2A49F68 /* NextLiftDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextLiftDatabase.m; path = stores/NextLiftDatabase.m; sourceTree = "<group>"; };
 		CF9241613C211B28BF8D14E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +112,10 @@
 				576B400B1B9F953400B9D296 /* Images.xcassets */,
 				576B400D1B9F953400B9D296 /* LaunchScreen.xib */,
 				576B3FFE1B9F953400B9D296 /* Supporting Files */,
+				BA88B6C254DF17ACC2A49F68 /* NextLiftDatabase.m */,
+				BA88B155E3002AEC33D1715F /* NextLiftDatabase.h */,
+				BA88B4D2D11467391AFF8137 /* NextLiftDatabaseFactory.m */,
+				BA88B0FF09B7A5505899DD9B /* NextLiftDatabaseFactory.h */,
 			);
 			path = NextLift;
 			sourceTree = "<group>";
@@ -142,8 +149,6 @@
 		57DE91231B9FA544009837A3 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				57DE91241B9FA565009837A3 /* DatabaseService.h */,
-				57DE91251B9FA565009837A3 /* DatabaseService.m */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -293,8 +298,9 @@
 			files = (
 				576B40071B9F953400B9D296 /* ViewController.m in Sources */,
 				576B40041B9F953400B9D296 /* AppDelegate.m in Sources */,
-				57DE91261B9FA565009837A3 /* DatabaseService.m in Sources */,
 				576B40011B9F953400B9D296 /* main.m in Sources */,
+				BA88B80C5A375A9C83BB645A /* NextLiftDatabase.m in Sources */,
+				BA88BAD6B05A8BE6D8B7BE8B /* NextLiftDatabaseFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

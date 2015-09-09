@@ -1,5 +1,5 @@
 //
-//  DatabaseService.h
+//  NextLiftDatabase.h
 //  NextLift
 //
 //  Created by Dai Williams on 09/09/2015.
@@ -9,10 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "CouchbaseLite/CouchbaseLite.h"
 
-@interface DatabaseService : NSObject
+@interface NextLiftDatabase : NSObject
 
-@property (strong, nonatomic) CBLManager *manager;
-
-- (CBLDatabase *)getDatabase:(NSString *)name;
+- (instancetype)init;
 
 @end
