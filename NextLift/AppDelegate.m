@@ -23,7 +23,7 @@
     // Just here while testing
     NextLiftDatabase *db = [NextLiftDatabaseFactory getInstance];
 
-    ExerciseModel *em = [[ExerciseModel alloc] initWithName:@"Bicep Curl" bodypart:@"Arms"];
+    ExerciseModel *em = [[ExerciseModel alloc] initWithName:@"Bicep Curl" bodypart:@"Arms" sets:4 weight:20 unit:@"kg"];
 
     NSLog(@"%@", [db addExercise:em]);
     return YES;

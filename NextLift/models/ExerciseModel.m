@@ -8,15 +8,19 @@
 
 @implementation ExerciseModel
 
-@synthesize name = _name, bodypart = _bodypart;
+@synthesize name = _name, bodypart = _bodypart, sets = _sets, weight = _weight, unit = _unit;
 
-- (instancetype)initWithName:(NSString *)n bodypart:(NSString *)b {
+- (instancetype)initWithName:(NSString *)n bodypart:(NSString *)b sets:(int)s weight:(double)w unit:(NSString *)u {
 
     if (self = [super init]) {
         _name = n;
         _bodypart = b;
+        _sets = s;
+        _weight = w;
+        _unit = u;
     }
     return self;
+
 }
 
 @end

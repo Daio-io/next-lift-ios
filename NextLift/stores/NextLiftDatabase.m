@@ -38,7 +38,11 @@ CBLDatabase *db;
 
     CBLDocument *doc = [db createDocument];
 
-    NSDictionary *exDict = @{@"name" : exerciseModel.name, @"bodypart" : exerciseModel.bodypart};
+    NSDictionary *exDict = @{@"name" : exerciseModel.name,
+            @"bodypart" : exerciseModel.bodypart,
+            @"sets" : @(exerciseModel.sets),
+            @"weight" : @(exerciseModel.weight),
+            @"unit" : exerciseModel.unit};
 
     CBLRevision *revision = [doc putProperties:exDict error:&error];
 
