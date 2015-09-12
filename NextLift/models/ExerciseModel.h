@@ -4,21 +4,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CBLModel.h"
 
 
-@interface ExerciseModel : NSObject
+@interface ExerciseModel : CBLModel
 
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSString *bodypart;
 @property(nonatomic) int sets;
 @property(nonatomic) double weight;
 @property(nonatomic, strong) NSString *unit;
-
-- (instancetype)initWithName:(NSString *)n
-                    bodypart:(NSString *)b
-                        sets:(int)s
-                      weight:(double)w
-                        unit:(NSString *)u;
-
 
 @end

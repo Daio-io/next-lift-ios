@@ -26,40 +26,31 @@ NSString *const DATABASE_NAME = @"nextlift";
     CBLManager *manager = [CBLManager sharedInstance];
     self.db = [manager databaseNamed:DATABASE_NAME error:&error];
     if (error) {
-        NSLog(@"Error getting Databse, message %@", error.localizedDescription);
+        NSLog(@"Error getting Database, message %@", error.localizedDescription);
     }
 }
 
-- (NSString *)addExercise:(ExerciseModel *)exerciseModel {
 
+- (ExerciseModel *)addExerciseWithName:(NSString *)n bodypart:(NSString *)b sets:(int)s weight:(double)w unit:(NSString *)u
+{
     NSError *error;
-
-    CBLDocument *doc = [self.db createDocument];
-
-    NSDictionary *exDict = @{@"name" : exerciseModel.name,
-            @"bodypart" : exerciseModel.bodypart,
-            @"sets" : @(exerciseModel.sets),
-            @"weight" : @(exerciseModel.weight),
-            @"unit" : exerciseModel.unit};
-
-    CBLRevision *revision = [doc putProperties:exDict error:&error];
-
-    if (!revision) {
-        NSLog(@"Unable to write document to database, Error: %@", error.localizedDescription);
-        return nil;
-    }
-
-    return doc.documentID;
+    ExerciseModel *model = [ExerciseModel modelForNewDocumentInDatabase:self.db];
+    model.name = n;
+    model.bodypart = b;
+    model.sets = s;
+    model.weight = w;
+    model.unit = u;
+    [model save:&error];
+    return model;
 }
 
 - (NSArray *)getAllExercisesFor:(NSString *)bodypart {
 
     NSError *error;
-
     NSString *where = [NSString stringWithFormat:@"bodypart == '%@'", bodypart];
     CBLQueryBuilder *query = [[CBLQueryBuilder alloc]
             initWithDatabase:self.db
-                      select:@[@"name", @"bodypart"]
+                      select:@[@"name"]
                        where:where
                      orderBy:@[@"-date"]
                        error:&error];
@@ -71,10 +62,10 @@ NSString *const DATABASE_NAME = @"nextlift";
 
     NSError *err;
     CBLQueryEnumerator *e = [query runQueryWithContext:nil
-                                               error:&err];
+                                                 error:&err];
+
 
     if (e) {
-        NSLog(@"found %@ ", e.allObjects);
         return e.allObjects;
     } else {
         NSLog(@"Error  %@", err.localizedDescription);
@@ -82,5 +73,10 @@ NSString *const DATABASE_NAME = @"nextlift";
     }
 
 }
+
+- (NSArray *)getAllBodyparts {
+    return nil;
+}
+
 
 @end

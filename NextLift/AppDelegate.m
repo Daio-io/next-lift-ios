@@ -23,11 +23,15 @@
     // Just here while testing
     NextLiftDatabase *db = [NextLiftDatabaseFactory getInstance];
 
-    ExerciseModel *em = [[ExerciseModel alloc] initWithName:@"Bicep Curl" bodypart:@"Arms" sets:4 weight:20 unit:@"kg"];
+    [db addExerciseWithName:@"push up" bodypart:@"chest" sets:4 weight:10 unit:@"kg"];
 
-    NSLog(@"%@", [db addExercise:em]);
+    NSArray *arr = [db getAllExercisesFor:@"chest"];
 
-    [db getAllExercisesFor:@"Arms"];
+    for (CBLQueryRow *row in arr) {
+        NSArray *arro = [row value];
+        NSLog(@"%@", arro[0]);
+    }
+
     return YES;
 }
 
