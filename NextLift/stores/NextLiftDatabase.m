@@ -11,8 +11,6 @@
 
 NSString *const DATABASE_NAME = @"nextlift";
 
-CBLDatabase *db;
-
 @implementation NextLiftDatabase
 
 - (instancetype)init {
@@ -26,7 +24,7 @@ CBLDatabase *db;
     NSError *error;
 
     CBLManager *manager = [CBLManager sharedInstance];
-    db = [manager databaseNamed:DATABASE_NAME error:&error];
+    self.db = [manager databaseNamed:DATABASE_NAME error:&error];
     if (error) {
         NSLog(@"Error getting Databse, message %@", error.localizedDescription);
     }
@@ -36,7 +34,7 @@ CBLDatabase *db;
 
     NSError *error;
 
-    CBLDocument *doc = [db createDocument];
+    CBLDocument *doc = [self.db createDocument];
 
     NSDictionary *exDict = @{@"name" : exerciseModel.name,
             @"bodypart" : exerciseModel.bodypart,
@@ -54,9 +52,35 @@ CBLDatabase *db;
     return doc.documentID;
 }
 
-- (NSArray *)getAllExercises {
-    return nil;
-}
+- (NSArray *)getAllExercisesFor:(NSString *)bodypart {
 
+    NSError *error;
+
+    NSString *where = [NSString stringWithFormat:@"bodypart == '%@'", bodypart];
+    CBLQueryBuilder *query = [[CBLQueryBuilder alloc]
+            initWithDatabase:self.db
+                      select:@[@"name", @"bodypart"]
+                       where:where
+                     orderBy:@[@"-date"]
+                       error:&error];
+
+    if (error) {
+        NSLog(@"No data found for %@", bodypart);
+        return nil;
+    }
+
+    NSError *err;
+    CBLQueryEnumerator *e = [query runQueryWithContext:nil
+                                               error:&err];
+
+    if (e) {
+        NSLog(@"found %@ ", e.allObjects);
+        return e.allObjects;
+    } else {
+        NSLog(@"Error  %@", err.localizedDescription);
+        return nil;
+    }
+
+}
 
 @end

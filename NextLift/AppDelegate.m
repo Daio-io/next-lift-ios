@@ -26,6 +26,8 @@
     ExerciseModel *em = [[ExerciseModel alloc] initWithName:@"Bicep Curl" bodypart:@"Arms" sets:4 weight:20 unit:@"kg"];
 
     NSLog(@"%@", [db addExercise:em]);
+
+    [db getAllExercisesFor:@"Arms"];
     return YES;
 }
 

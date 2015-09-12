@@ -13,7 +13,9 @@
 
 @interface NextLiftDatabase : NSObject
 
+@property (nonatomic, strong) CBLDatabase *db;
+
 - (NSString *)addExercise:(ExerciseModel *)exerciseModel;
-- (NSArray *)getAllExercises;
+- (NSArray *)getAllExercisesFor:(NSString *)bodypart;
 
 @end
