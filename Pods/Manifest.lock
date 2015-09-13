@@ -1,12 +1,12 @@
 PODS:
-  - couchbase-lite-ios (1.1.0):
-    - couchbase-lite-ios/Core (= 1.1.0)
-  - couchbase-lite-ios/Core (1.1.0)
+  - Realm (0.95.0):
+    - Realm/Headers (= 0.95.0)
+  - Realm/Headers (0.95.0)
 
 DEPENDENCIES:
-  - couchbase-lite-ios (~> 1.1.0)
+  - Realm
 
 SPEC CHECKSUMS:
-  couchbase-lite-ios: fc7be01032dc1a4c923d1a52b6734eb9b20bf072
+  Realm: bbb171b96728ea136ed5cd354dca2a3d6529923c
 
 COCOAPODS: 0.38.2

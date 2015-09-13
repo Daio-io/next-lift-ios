@@ -15,9 +15,9 @@
 		576B400F1B9F953400B9D296 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576B400D1B9F953400B9D296 /* LaunchScreen.xib */; };
 		576B401B1B9F953400B9D296 /* NextLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B401A1B9F953400B9D296 /* NextLiftTests.m */; };
 		6D7217C990EC6EC9258F82DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9241613C211B28BF8D14E4 /* libPods.a */; };
-		BA88B80C5A375A9C83BB645A /* NextLiftDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B6C254DF17ACC2A49F68 /* NextLiftDatabase.m */; };
-		BA88BAD6B05A8BE6D8B7BE8B /* NextLiftDatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B4D2D11467391AFF8137 /* NextLiftDatabaseFactory.m */; };
-		BA88BB19AF3DD39F9846398E /* ExerciseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BFFA68CC5FF3B699AE9C /* ExerciseModel.m */; };
+		BA88B92F7175442FE9FD8992 /* NLFExerciseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BFE56463F85FD0001B39 /* NLFExerciseModel.m */; };
+		BA88BA7719CA7B3EC70D868E /* NLFDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B27A69F6AD47032221C2 /* NLFDatabase.m */; };
+		BA88BDB1BAF30493052BCF36 /* NLFDatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +46,12 @@
 		576B401A1B9F953400B9D296 /* NextLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextLiftTests.m; sourceTree = "<group>"; };
 		6058FAF29D7829664B0D844C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		98309EBDAE26E0F0A112B016 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		BA88B0FF09B7A5505899DD9B /* NextLiftDatabaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextLiftDatabaseFactory.h; path = Stores/NextLiftDatabaseFactory.h; sourceTree = "<group>"; };
-		BA88B155E3002AEC33D1715F /* NextLiftDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextLiftDatabase.h; path = Stores/NextLiftDatabase.h; sourceTree = "<group>"; };
-		BA88B4D2D11467391AFF8137 /* NextLiftDatabaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextLiftDatabaseFactory.m; path = Stores/NextLiftDatabaseFactory.m; sourceTree = "<group>"; };
-		BA88B6278B9C8F2B307E7EF4 /* ExerciseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExerciseModel.h; path = Models/ExerciseModel.h; sourceTree = "<group>"; };
-		BA88B6C254DF17ACC2A49F68 /* NextLiftDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextLiftDatabase.m; path = Stores/NextLiftDatabase.m; sourceTree = "<group>"; };
-		BA88BFFA68CC5FF3B699AE9C /* ExerciseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExerciseModel.m; path = Models/ExerciseModel.m; sourceTree = "<group>"; };
+		BA88B27A69F6AD47032221C2 /* NLFDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFDatabase.m; path = Stores/NLFDatabase.m; sourceTree = "<group>"; };
+		BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFDatabaseFactory.m; path = Stores/NLFDatabaseFactory.m; sourceTree = "<group>"; };
+		BA88BB59C41EEB92173EC7E9 /* NLFDatabaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFDatabaseFactory.h; path = Stores/NLFDatabaseFactory.h; sourceTree = "<group>"; };
+		BA88BD91E92FA38DCBB96B6E /* NLFDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFDatabase.h; path = Stores/NLFDatabase.h; sourceTree = "<group>"; };
+		BA88BEE692FF2233A8CDA6EB /* NLFExerciseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFExerciseModel.h; path = Models/NLFExerciseModel.h; sourceTree = "<group>"; };
+		BA88BFE56463F85FD0001B39 /* NLFExerciseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFExerciseModel.m; path = Models/NLFExerciseModel.m; sourceTree = "<group>"; };
 		CF9241613C211B28BF8D14E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,12 +115,12 @@
 				576B400B1B9F953400B9D296 /* Images.xcassets */,
 				576B400D1B9F953400B9D296 /* LaunchScreen.xib */,
 				576B3FFE1B9F953400B9D296 /* Supporting Files */,
-				BA88B6C254DF17ACC2A49F68 /* NextLiftDatabase.m */,
-				BA88B155E3002AEC33D1715F /* NextLiftDatabase.h */,
-				BA88B4D2D11467391AFF8137 /* NextLiftDatabaseFactory.m */,
-				BA88B0FF09B7A5505899DD9B /* NextLiftDatabaseFactory.h */,
-				BA88B6278B9C8F2B307E7EF4 /* ExerciseModel.h */,
-				BA88BFFA68CC5FF3B699AE9C /* ExerciseModel.m */,
+				BA88BFE56463F85FD0001B39 /* NLFExerciseModel.m */,
+				BA88BEE692FF2233A8CDA6EB /* NLFExerciseModel.h */,
+				BA88B27A69F6AD47032221C2 /* NLFDatabase.m */,
+				BA88BD91E92FA38DCBB96B6E /* NLFDatabase.h */,
+				BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */,
+				BA88BB59C41EEB92173EC7E9 /* NLFDatabaseFactory.h */,
 			);
 			path = NextLift;
 			sourceTree = "<group>";
@@ -304,9 +304,9 @@
 				576B40071B9F953400B9D296 /* ViewController.m in Sources */,
 				576B40041B9F953400B9D296 /* AppDelegate.m in Sources */,
 				576B40011B9F953400B9D296 /* main.m in Sources */,
-				BA88B80C5A375A9C83BB645A /* NextLiftDatabase.m in Sources */,
-				BA88BAD6B05A8BE6D8B7BE8B /* NextLiftDatabaseFactory.m in Sources */,
-				BA88BB19AF3DD39F9846398E /* ExerciseModel.m in Sources */,
+				BA88B92F7175442FE9FD8992 /* NLFExerciseModel.m in Sources */,
+				BA88BA7719CA7B3EC70D868E /* NLFDatabase.m in Sources */,
+				BA88BDB1BAF30493052BCF36 /* NLFDatabaseFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

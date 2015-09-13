@@ -6,9 +6,11 @@
 //  Copyright (c) 2015 daio. All rights reserved.
 //
 
+#import <Realm/realm/RLMRealm.h>
 #import "AppDelegate.h"
-#import "NextLiftDatabaseFactory.h"
-#import "ExerciseModel.h"
+#import "NLFExerciseModel.h"
+#import "NLFDatabase.h"
+#import "NLFDatabaseFactory.h"
 
 @interface AppDelegate ()
 
@@ -20,17 +22,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    // Just here while testing
-    NextLiftDatabase *db = [NextLiftDatabaseFactory getInstance];
+    // Only here while testing
+    NLFExerciseModel *em = [NLFExerciseModel new];
 
-    [db addExerciseWithName:@"push up" bodypart:@"chest" sets:4 weight:10 unit:@"kg"];
+    em.name = @"Bicep Curl";
+    em.bodypart = @"Arms";
+    em.reps = 8;
+    em.sets = 3;
+    em.unit = @"kg";
+    em.weight = 20;
 
-    NSArray *arr = [db getAllExercisesFor:@"chest"];
+    NLFDatabase *db  = [NLFDatabaseFactory getInstance];
 
-    for (CBLQueryRow *row in arr) {
-        NSArray *arro = [row value];
-        NSLog(@"%@", arro[0]);
-    }
+    [db addExercise:em];
+
+    RLMResults *r = [db getAllExercises];
+
+    NSLog(@"%@", r);
 
     return YES;
 }

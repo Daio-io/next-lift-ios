@@ -1,6 +1,8 @@
-FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/couchbase-lite-ios"
+CLANG_CXX_LANGUAGE_STANDARD = compiler-default
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/couchbase-lite-ios" "${PODS_ROOT}/Headers/Public/couchbase-lite-ios/CouchbaseLite"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/couchbase-lite-ios" -isystem "${PODS_ROOT}/Headers/Public/couchbase-lite-ios/CouchbaseLite"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"sqlite3" -l"z" -framework "CFNetwork" -framework "CouchbaseLite" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/Realm/realm"
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/Realm/core"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Realm" -isystem "${PODS_ROOT}/Headers/Public/Realm/realm"
+OTHER_CPLUSPLUSFLAGS = -std=c++1y $(inherited) -std=c++1y $(inherited) -std=c++1y $(inherited)
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Realm" -l"c++" -l"realm-ios"
 PODS_ROOT = ${SRCROOT}/Pods
