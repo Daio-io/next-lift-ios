@@ -13,9 +13,9 @@
     RLMRealm *realm;
 }
 
-- (instancetype)init {
+- (instancetype)initWithRealm:(RLMRealm *)rlmRealm {
     if (self = [super init]) {
-        realm = [RLMRealm defaultRealm];
+        realm = rlmRealm;
     }
     return self;
 }

@@ -11,6 +11,7 @@
 
 @interface NLFDatabase : NSObject
 
+- (instancetype)initWithRealm:(RLMRealm *)realm;
 - (RLMResults *)getAllExercises;
 - (RLMResults *)getAllExercisesForBodypart:(NSString *)bodypart;
 - (void)addExercise:(NLFExerciseModel *)exerciseModel;

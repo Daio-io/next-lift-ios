@@ -5,6 +5,7 @@
 
 #import "NLFDatabaseFactory.h"
 #import "NLFDatabase.h"
+#import "RLMRealm.h"
 
 @implementation NLFDatabaseFactory
 
@@ -12,7 +13,7 @@ NLFDatabase *database;
 
 + (NLFDatabase *)getInstance {
     if (!database) {
-        database = [NLFDatabase new];
+        database = [[NLFDatabase alloc] initWithRealm:[RLMRealm defaultRealm]];
     }
     return database;
 }
