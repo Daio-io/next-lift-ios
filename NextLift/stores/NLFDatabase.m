@@ -24,7 +24,7 @@
     return r;
 }
 
-- (RLMResults *)getAllExercisesForCatergory:(NSString *)category {
+- (RLMResults *)getAllExercisesForCategory:(NSString *)category {
     NSString *query = [NSString stringWithFormat:@"category == '%@'", category];
     RLMResults *r = [NLFExercise objectsWhere:query];
     return r;

@@ -14,7 +14,7 @@
 
 - (instancetype)initWithRealm:(RLMRealm *)realm;
 - (RLMResults *)getAllExercises;
-- (RLMResults *)getAllExercisesForCatergory:(NSString *)category;
+- (RLMResults *)getAllExercisesForCategory:(NSString *)category;
 - (void)addExercise:(NLFExercise *)exerciseModel;
 
 @end

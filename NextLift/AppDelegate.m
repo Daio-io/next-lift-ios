@@ -12,6 +12,7 @@
 #import "NLFDatabase.h"
 #import "NLFDatabaseFactory.h"
 #import "NLFBodyCategory.h"
+#import "RLMResults.h"
 
 @interface AppDelegate ()
 
@@ -40,7 +41,7 @@
 
     [db addExercise:em];
 
-    RLMResults *r = [db getAllExercisesForCatergory:bc.name];
+    RLMResults *r = [db getAllExercisesForCategory:bc.name];
 
     NSLog(@"%@", r);
 
