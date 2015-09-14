@@ -6,10 +6,12 @@
 #import <Foundation/Foundation.h>
 #import "RLMObject.h"
 
-@interface NLFExerciseModel : RLMObject;
+@class NLFBodyCatergory;
+
+@interface NLFExercise : RLMObject;
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *bodypart;
+@property (nonatomic, strong) NSString *category;
 @property (nonatomic) int sets;
 @property (nonatomic) int reps;
 @property (nonatomic) double weight;

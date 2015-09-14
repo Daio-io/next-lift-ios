@@ -6,14 +6,15 @@
 #import <Foundation/Foundation.h>
 
 @class RLMResults;
-@class NLFExerciseModel;
+@class NLFExercise;
+@class RLMRealm;
 
 
 @interface NLFDatabase : NSObject
 
 - (instancetype)initWithRealm:(RLMRealm *)realm;
 - (RLMResults *)getAllExercises;
-- (RLMResults *)getAllExercisesForBodypart:(NSString *)bodypart;
-- (void)addExercise:(NLFExerciseModel *)exerciseModel;
+- (RLMResults *)getAllExercisesForCatergory:(NSString *)category;
+- (void)addExercise:(NLFExercise *)exerciseModel;
 
 @end

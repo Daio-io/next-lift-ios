@@ -8,9 +8,10 @@
 
 #import <Realm/realm/RLMRealm.h>
 #import "AppDelegate.h"
-#import "NLFExerciseModel.h"
+#import "NLFExercise.h"
 #import "NLFDatabase.h"
 #import "NLFDatabaseFactory.h"
+#import "NLFBodyCategory.h"
 
 @interface AppDelegate ()
 
@@ -23,10 +24,13 @@
     // Override point for customization after application launch.
 
     // Only here while testing
-    NLFExerciseModel *em = [NLFExerciseModel new];
+    NLFExercise *em = [NLFExercise new];
+    NLFBodyCategory *bc = [NLFBodyCategory new];
 
-    em.name = @"Bicep Curl";
-    em.bodypart = @"Arms";
+    bc.name = @"Arms";
+
+    em.name = @"Tricep Dip";
+    em.category = @"Arms";
     em.reps = 8;
     em.sets = 3;
     em.unit = @"kg";
@@ -36,7 +40,7 @@
 
     [db addExercise:em];
 
-    RLMResults *r = [db getAllExercises];
+    RLMResults *r = [db getAllExercisesForCatergory:bc.name];
 
     NSLog(@"%@", r);
 

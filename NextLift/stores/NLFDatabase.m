@@ -6,8 +6,7 @@
 #import <Realm/realm/RLMRealm.h>
 #import "NLFDatabase.h"
 #import "RLMResults.h"
-#import "NLFExerciseModel.h"
-
+#import "NLFExercise.h"
 
 @implementation NLFDatabase {
     RLMRealm *realm;
@@ -21,17 +20,17 @@
 }
 
 - (RLMResults *)getAllExercises {
-    RLMResults *r = [NLFExerciseModel allObjects];
+    RLMResults *r = [NLFExercise allObjects];
     return r;
 }
 
-- (RLMResults *)getAllExercisesForBodypart:(NSString *)bodypart {
-    NSString *query = [NSString stringWithFormat:@"bodypart == '%@'", bodypart];
-    RLMResults *r = [NLFExerciseModel objectsWhere:query];
+- (RLMResults *)getAllExercisesForCatergory:(NSString *)category {
+    NSString *query = [NSString stringWithFormat:@"category == '%@'", category];
+    RLMResults *r = [NLFExercise objectsWhere:query];
     return r;
 }
 
-- (void)addExercise:(NLFExerciseModel *)exerciseModel {
+- (void)addExercise:(NLFExercise *)exerciseModel {
     [realm transactionWithBlock:^{
         [realm addObject:exerciseModel];
     }];
