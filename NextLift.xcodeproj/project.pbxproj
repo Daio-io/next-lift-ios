@@ -109,7 +109,8 @@
 		576B3FFD1B9F953400B9D296 /* NextLift */ = {
 			isa = PBXGroup;
 			children = (
-				57DE91231B9FA544009837A3 /* services */,
+				57DA6AEF1BA76488007B9EC7 /* Stores */,
+				57DA6AEE1BA7646B007B9EC7 /* Models */,
 				576B40021B9F953400B9D296 /* AppDelegate.h */,
 				576B40031B9F953400B9D296 /* AppDelegate.m */,
 				576B40051B9F953400B9D296 /* ViewController.h */,
@@ -118,14 +119,6 @@
 				576B400B1B9F953400B9D296 /* Images.xcassets */,
 				576B400D1B9F953400B9D296 /* LaunchScreen.xib */,
 				576B3FFE1B9F953400B9D296 /* Supporting Files */,
-				BA88BFE56463F85FD0001B39 /* NLFExercise.m */,
-				BA88BEE692FF2233A8CDA6EB /* NLFExercise.h */,
-				BA88B27A69F6AD47032221C2 /* NLFDatabase.m */,
-				BA88BD91E92FA38DCBB96B6E /* NLFDatabase.h */,
-				BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */,
-				BA88BB59C41EEB92173EC7E9 /* NLFDatabaseFactory.h */,
-				BA88BF46D126F208297E3E8D /* NLFBodyCategory.m */,
-				BA88B5679C786CFA6A59B89E /* NLFBodyCategory.h */,
 			);
 			path = NextLift;
 			sourceTree = "<group>";
@@ -156,11 +149,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		57DE91231B9FA544009837A3 /* services */ = {
+		57DA6AEE1BA7646B007B9EC7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA88BFE56463F85FD0001B39 /* NLFExercise.m */,
+				BA88BEE692FF2233A8CDA6EB /* NLFExercise.h */,
+				BA88BF46D126F208297E3E8D /* NLFBodyCategory.m */,
+				BA88B5679C786CFA6A59B89E /* NLFBodyCategory.h */,
 			);
-			name = services;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		57DA6AEF1BA76488007B9EC7 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				BA88B27A69F6AD47032221C2 /* NLFDatabase.m */,
+				BA88BD91E92FA38DCBB96B6E /* NLFDatabase.h */,
+				BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */,
+				BA88BB59C41EEB92173EC7E9 /* NLFDatabaseFactory.h */,
+			);
+			name = Stores;
 			sourceTree = "<group>";
 		};
 		6BD161F2285104FD221BBA4C /* Frameworks */ = {
