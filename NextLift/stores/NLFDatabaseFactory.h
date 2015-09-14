@@ -4,9 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class NLFDatabase;
-
+#import "NLFDatabase.h"
 
 @interface NLFDatabaseFactory : NSObject
 

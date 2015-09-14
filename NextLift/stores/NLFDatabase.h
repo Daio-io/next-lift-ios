@@ -9,9 +9,18 @@
 #import "NLFExercise.h"
 #import "NLFBodyCategory.h"
 
+@protocol NLFDatabaseDelegate <NSObject>
+@optional
+- (void)categoryAdded;
+- (void)exerciseAdded;
+@end
+
 @interface NLFDatabase : NSObject
 
 - (instancetype)initWithRealm:(RLMRealm *)realm;
+
+- (void)addConsumer:(id<NLFDatabaseDelegate>)consumer;
+
 - (RLMResults *)getAllExercises;
 - (RLMResults *)getAllExercisesForCategory:(NSString *)category;
 - (RLMResults *)getAllCategories;

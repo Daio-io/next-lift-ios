@@ -9,7 +9,7 @@
 
 @implementation NLFDatabaseFactory
 
-NLFDatabase *database;
+static NLFDatabase *database = nil;
 
 + (NLFDatabase *)getInstance {
     if (!database) {

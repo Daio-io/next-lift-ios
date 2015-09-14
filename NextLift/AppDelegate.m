@@ -24,31 +24,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    // Only here while testing
-    NLFExercise *em = [NLFExercise new];
-    NLFBodyCategory *bc = [NLFBodyCategory new];
-
-    bc.name = @"Arms";
-
-    em.name = @"Tricep Dip";
-    em.category = @"Arms";
-    em.reps = 8;
-    em.sets = 3;
-    em.unit = @"kg";
-    em.weight = 20;
-
-    NLFDatabase *db  = [NLFDatabaseFactory getInstance];
-
-    [db addExercise:em];
-    [db addCategory:bc];
-
-
-    RLMResults *r = [db getAllExercisesForCategory:bc.name];
-    RLMResults *rd = [db getAllCategories];
-
-    NSLog(@"%@", r);
-    NSLog(@"%@", rd);
-
     return YES;
 }
 
