@@ -5,8 +5,6 @@
 
 #import <Realm/realm/RLMRealm.h>
 #import "NLFDatabase.h"
-#import "RLMResults.h"
-#import "NLFExercise.h"
 
 @implementation NLFDatabase {
     RLMRealm *realm;
@@ -30,11 +28,21 @@
     return r;
 }
 
+- (RLMResults *)getAllCategories {
+    RLMResults *r = [NLFBodyCategory allObjects];
+    return r;
+}
+
 - (void)addExercise:(NLFExercise *)exerciseModel {
     [realm transactionWithBlock:^{
-        [realm addObject:exerciseModel];
+        [realm addOrUpdateObject:exerciseModel];
     }];
 }
 
+- (void)addCategory:(NLFBodyCategory *)bodyCategory {
+    [realm transactionWithBlock:^{
+        [realm addOrUpdateObject:bodyCategory];
+    }];
+}
 
 @end

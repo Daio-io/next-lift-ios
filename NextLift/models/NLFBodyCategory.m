@@ -6,7 +6,10 @@
 #import "NLFBodyCategory.h"
 
 
-@implementation NLFBodyCategory {
+@implementation NLFBodyCategory
 
++ (NSString *)primaryKey {
+    return @"name";
 }
+
 @end

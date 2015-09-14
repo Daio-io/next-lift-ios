@@ -4,10 +4,11 @@
 //
 
 #import "NLFExercise.h"
-#import "NLFBodyCategory.h"
-
 
 @implementation NLFExercise
 
++ (NSString *)primaryKey {
+    return @"name";
+}
 
 @end

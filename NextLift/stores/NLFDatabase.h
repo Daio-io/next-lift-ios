@@ -4,17 +4,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class RLMResults;
-@class NLFExercise;
-@class RLMRealm;
-
+#import "RLMRealm.h"
+#import "RLMResults.h"
+#import "NLFExercise.h"
+#import "NLFBodyCategory.h"
 
 @interface NLFDatabase : NSObject
 
 - (instancetype)initWithRealm:(RLMRealm *)realm;
 - (RLMResults *)getAllExercises;
 - (RLMResults *)getAllExercisesForCategory:(NSString *)category;
+- (RLMResults *)getAllCategories;
 - (void)addExercise:(NLFExercise *)exerciseModel;
+- (void)addCategory:(NLFBodyCategory *)bodyCategory;
 
 @end

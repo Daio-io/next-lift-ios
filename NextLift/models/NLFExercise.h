@@ -6,8 +6,6 @@
 #import <Foundation/Foundation.h>
 #import "RLMObject.h"
 
-@class NLFBodyCatergory;
-
 @interface NLFExercise : RLMObject;
 
 @property (nonatomic, strong) NSString *name;

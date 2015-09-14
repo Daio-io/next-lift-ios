@@ -40,10 +40,14 @@
     NLFDatabase *db  = [NLFDatabaseFactory getInstance];
 
     [db addExercise:em];
+    [db addCategory:bc];
+
 
     RLMResults *r = [db getAllExercisesForCategory:bc.name];
+    RLMResults *rd = [db getAllCategories];
 
     NSLog(@"%@", r);
+    NSLog(@"%@", rd);
 
     return YES;
 }
