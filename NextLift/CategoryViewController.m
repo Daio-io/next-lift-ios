@@ -8,11 +8,12 @@
 
 #import "CategoryViewController.h"
 #import "NLFDatabaseFactory.h"
+#import "CategoryTableCell.h"
 
 @interface CategoryViewController ()
 
-@property (nonatomic, strong) NLFDatabase *db;
-@property (nonatomic, strong) RLMResults *categories;
+@property(nonatomic, strong) NLFDatabase *db;
+@property(nonatomic, strong) RLMResults *categories;
 
 @end
 
@@ -25,7 +26,7 @@ static NSString *cellIdentifier = @"category";
     self.db = [NLFDatabaseFactory getInstance];
     [self.db addConsumer:self];
     self.categories = [self.db getAllCategories];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
+    [self.tableView registerClass:[CategoryTableCell class] forCellReuseIdentifier:cellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,31 +43,33 @@ static NSString *cellIdentifier = @"category";
 
 #pragma mark - <UITableViewDelegate>
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.categories.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     NLFBodyCategory *bodyCategory = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoryTableCell" owner:self options:nil];
+    CategoryTableCell *cell = nib[0];
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text = bodyCategory.name;
-
+    cell.nameLabel.text = bodyCategory.name;
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NLFBodyCategory *bodyCategory = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
 
     NSLog(@"Clicked %@", bodyCategory.name);
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 56;
 }
 
 /*
