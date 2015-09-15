@@ -6,20 +6,15 @@
 //  Copyright (c) 2015 daio. All rights reserved.
 //
 
-#import <Realm/realm/RLMRealm.h>
 #import "AppDelegate.h"
-#import "NLFExercise.h"
 #import "NLFDatabase.h"
 #import "NLFDatabaseFactory.h"
-#import "NLFBodyCategory.h"
-#import "RLMResults.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

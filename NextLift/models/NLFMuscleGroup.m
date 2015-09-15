@@ -3,10 +3,10 @@
 // Copyright (c) 2015 daio. All rights reserved.
 //
 
-#import "NLFBodyCategory.h"
+#import "NLFMuscleGroup.h"
 
 
-@implementation NLFBodyCategory
+@implementation NLFMuscleGroup
 
 + (NSString *)primaryKey {
     return @"name";

@@ -9,7 +9,7 @@
 @interface NLFExercise : RLMObject;
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *category;
+@property (nonatomic, strong) NSString *group;
 @property (nonatomic) int sets;
 @property (nonatomic) int reps;
 @property (nonatomic) double weight;

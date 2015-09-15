@@ -30,14 +30,14 @@
     return r;
 }
 
-- (RLMResults *)getAllExercisesForCategory:(NSString *)category {
-    NSString *query = [NSString stringWithFormat:@"category == '%@'", category];
+- (RLMResults *)getAllExercisesForMuscleGroup:(NSString *)group {
+    NSString *query = [NSString stringWithFormat:@"group == '%@'", group];
     RLMResults *r = [NLFExercise objectsWhere:query];
     return r;
 }
 
 - (RLMResults *)getAllCategories {
-    RLMResults *r = [NLFBodyCategory allObjects];
+    RLMResults *r = [NLFMuscleGroup allObjects];
     return r;
 }
 
@@ -52,9 +52,9 @@
     }
 }
 
-- (void)addCategory:(NLFBodyCategory *)bodyCategory {
+- (void)addMuscleGroup:(NLFMuscleGroup *)muscleGroup {
     [realm transactionWithBlock:^{
-        [realm addOrUpdateObject:bodyCategory];
+        [realm addOrUpdateObject:muscleGroup];
     }];
     for (id<NLFDatabaseDelegate> consumer in consumers) {
         if([consumer respondsToSelector:@selector(categoryAdded)]){

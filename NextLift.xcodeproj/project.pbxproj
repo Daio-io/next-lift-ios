@@ -20,7 +20,7 @@
 		BA88BDA7F20B5A60D64583B7 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BD1D695ABD7321C99973 /* CategoryViewController.m */; };
 		BA88BDB1BAF30493052BCF36 /* NLFDatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */; };
 		BA88BDCD39FE3A6D50964B1F /* CategoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA88B83760B6887B7CC24497 /* CategoryTableCell.xib */; };
-		BA88BE6EC269E0FD371D22DC /* NLFBodyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BF46D126F208297E3E8D /* NLFBodyCategory.m */; };
+		BA88BE6EC269E0FD371D22DC /* NLFMuscleGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BF46D126F208297E3E8D /* NLFMuscleGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 		BA88B27A69F6AD47032221C2 /* NLFDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFDatabase.m; path = Stores/NLFDatabase.m; sourceTree = "<group>"; };
 		BA88B3810347E2747FF8BFA5 /* CategoryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableCell.m; sourceTree = "<group>"; };
 		BA88B45D6F0A52D714C88567 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
-		BA88B5679C786CFA6A59B89E /* NLFBodyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFBodyCategory.h; path = Models/NLFBodyCategory.h; sourceTree = "<group>"; };
+		BA88B5679C786CFA6A59B89E /* NLFMuscleGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFMuscleGroup.h; path = models/NLFMuscleGroup.h; sourceTree = "<group>"; };
 		BA88B83760B6887B7CC24497 /* CategoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableCell.xib; sourceTree = "<group>"; };
 		BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFDatabaseFactory.m; path = Stores/NLFDatabaseFactory.m; sourceTree = "<group>"; };
 		BA88BB59C41EEB92173EC7E9 /* NLFDatabaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFDatabaseFactory.h; path = Stores/NLFDatabaseFactory.h; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		BA88BD91E92FA38DCBB96B6E /* NLFDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFDatabase.h; path = Stores/NLFDatabase.h; sourceTree = "<group>"; };
 		BA88BEE692FF2233A8CDA6EB /* NLFExercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFExercise.h; path = Models/NLFExercise.h; sourceTree = "<group>"; };
 		BA88BEF123CB60E3D8047FBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BA88BF46D126F208297E3E8D /* NLFBodyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFBodyCategory.m; path = Models/NLFBodyCategory.m; sourceTree = "<group>"; };
+		BA88BF46D126F208297E3E8D /* NLFMuscleGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFMuscleGroup.m; path = models/NLFMuscleGroup.m; sourceTree = "<group>"; };
 		BA88BFE56463F85FD0001B39 /* NLFExercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFExercise.m; path = Models/NLFExercise.m; sourceTree = "<group>"; };
 		CF9241613C211B28BF8D14E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,8 +158,8 @@
 			children = (
 				BA88BFE56463F85FD0001B39 /* NLFExercise.m */,
 				BA88BEE692FF2233A8CDA6EB /* NLFExercise.h */,
-				BA88BF46D126F208297E3E8D /* NLFBodyCategory.m */,
-				BA88B5679C786CFA6A59B89E /* NLFBodyCategory.h */,
+				BA88BF46D126F208297E3E8D /* NLFMuscleGroup.m */,
+				BA88B5679C786CFA6A59B89E /* NLFMuscleGroup.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 				BA88B92F7175442FE9FD8992 /* NLFExercise.m in Sources */,
 				BA88BA7719CA7B3EC70D868E /* NLFDatabase.m in Sources */,
 				BA88BDB1BAF30493052BCF36 /* NLFDatabaseFactory.m in Sources */,
-				BA88BE6EC269E0FD371D22DC /* NLFBodyCategory.m in Sources */,
+				BA88BE6EC269E0FD371D22DC /* NLFMuscleGroup.m in Sources */,
 				BA88BC3961AC65F23BD81C7E /* CategoryTableCell.m in Sources */,
 				BA88BDA7F20B5A60D64583B7 /* CategoryViewController.m in Sources */,
 			);

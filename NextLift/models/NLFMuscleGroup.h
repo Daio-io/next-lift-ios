@@ -7,7 +7,7 @@
 #import "RLMObject.h"
 
 
-@interface NLFBodyCategory :  RLMObject;
+@interface NLFMuscleGroup :  RLMObject;
 
 @property (nonatomic, strong) NSString *name;
 

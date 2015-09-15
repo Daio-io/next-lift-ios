@@ -7,7 +7,7 @@
 #import "RLMRealm.h"
 #import "RLMResults.h"
 #import "NLFExercise.h"
-#import "NLFBodyCategory.h"
+#import "NLFMuscleGroup.h"
 
 @protocol NLFDatabaseDelegate <NSObject>
 @optional
@@ -22,9 +22,9 @@
 - (void)addConsumer:(id<NLFDatabaseDelegate>)consumer;
 
 - (RLMResults *)getAllExercises;
-- (RLMResults *)getAllExercisesForCategory:(NSString *)category;
+- (RLMResults *)getAllExercisesForMuscleGroup:(NSString *)muscleGroup;
 - (RLMResults *)getAllCategories;
 - (void)addExercise:(NLFExercise *)exerciseModel;
-- (void)addCategory:(NLFBodyCategory *)bodyCategory;
+- (void)addMuscleGroup:(NLFMuscleGroup *)muscle;
 
 @end

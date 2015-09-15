@@ -53,7 +53,7 @@ static NSString *cellIdentifier = @"category";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    NLFBodyCategory *bodyCategory = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
+    NLFMuscleGroup *bodyCategory = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoryTableCell" owner:self options:nil];
     CategoryTableCell *cell = nib[0];
 
@@ -62,7 +62,7 @@ static NSString *cellIdentifier = @"category";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NLFBodyCategory *bodyCategory = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
+    NLFMuscleGroup *bodyCategory = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
 
     NSLog(@"Clicked %@", bodyCategory.name);
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
