@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Categories-->
+        <!--Muscle Groups-->
         <scene sceneID="bHG-St-gMu">
             <objects>
                 <tableViewController id="egT-eA-lCe" customClass="CategoryViewController" sceneMemberID="viewController">
@@ -21,7 +21,11 @@
                             <outlet property="delegate" destination="egT-eA-lCe" id="3Ew-U0-C70"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categories" id="vdD-bb-jRm"/>
+                    <navigationItem key="navigationItem" title="Muscle Groups" id="vdD-bb-jRm">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="u08-5B-AXx">
+                            <color key="tintColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPb-Rj-kTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
