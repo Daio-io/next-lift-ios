@@ -17,6 +17,7 @@
 		BA88BC3961AC65F23BD81C7E /* CategoryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B3810347E2747FF8BFA5 /* CategoryTableCell.m */; };
 		BA88BC98E47B56B3BCA15E16 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA88BC6D3AB28DB5E8919BDC /* LaunchScreen.xib */; };
 		BA88BCD23E67E84E8F20CEB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA88BEF123CB60E3D8047FBB /* Images.xcassets */; };
+		BA88BD46AB3D647F5CD5DCC5 /* NLFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BF57744577168FB04FC9 /* NLFColor.m */; };
 		BA88BDA7F20B5A60D64583B7 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BD1D695ABD7321C99973 /* CategoryViewController.m */; };
 		BA88BDB1BAF30493052BCF36 /* NLFDatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */; };
 		BA88BDCD39FE3A6D50964B1F /* CategoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA88B83760B6887B7CC24497 /* CategoryTableCell.xib */; };
@@ -54,11 +55,13 @@
 		BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFDatabaseFactory.m; path = Stores/NLFDatabaseFactory.m; sourceTree = "<group>"; };
 		BA88BB59C41EEB92173EC7E9 /* NLFDatabaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFDatabaseFactory.h; path = Stores/NLFDatabaseFactory.h; sourceTree = "<group>"; };
 		BA88BBDEA5B31255BBD27A53 /* CategoryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableCell.h; sourceTree = "<group>"; };
+		BA88BC41960E2EC056D4448C /* NLFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLFColor.h; sourceTree = "<group>"; };
 		BA88BD1D695ABD7321C99973 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		BA88BD91E92FA38DCBB96B6E /* NLFDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFDatabase.h; path = Stores/NLFDatabase.h; sourceTree = "<group>"; };
 		BA88BEE692FF2233A8CDA6EB /* NLFExercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFExercise.h; path = Models/NLFExercise.h; sourceTree = "<group>"; };
 		BA88BEF123CB60E3D8047FBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BA88BF46D126F208297E3E8D /* NLFMuscleGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFMuscleGroup.m; path = models/NLFMuscleGroup.m; sourceTree = "<group>"; };
+		BA88BF57744577168FB04FC9 /* NLFColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLFColor.m; sourceTree = "<group>"; };
 		BA88BFE56463F85FD0001B39 /* NLFExercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFExercise.m; path = Models/NLFExercise.m; sourceTree = "<group>"; };
 		CF9241613C211B28BF8D14E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +126,7 @@
 				576B40031B9F953400B9D296 /* AppDelegate.m */,
 				576B40081B9F953400B9D296 /* Main.storyboard */,
 				576B3FFE1B9F953400B9D296 /* Supporting Files */,
+				BA88B9F0CB95F6D5D13FC13E /* Utils */,
 			);
 			path = NextLift;
 			sourceTree = "<group>";
@@ -217,6 +221,15 @@
 				BA88BC6D3AB28DB5E8919BDC /* LaunchScreen.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		BA88B9F0CB95F6D5D13FC13E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BA88BF57744577168FB04FC9 /* NLFColor.m */,
+				BA88BC41960E2EC056D4448C /* NLFColor.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +376,7 @@
 				BA88BE6EC269E0FD371D22DC /* NLFMuscleGroup.m in Sources */,
 				BA88BC3961AC65F23BD81C7E /* CategoryTableCell.m in Sources */,
 				BA88BDA7F20B5A60D64583B7 /* CategoryViewController.m in Sources */,
+				BA88BD46AB3D647F5CD5DCC5 /* NLFColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

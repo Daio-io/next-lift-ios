@@ -7,6 +7,7 @@
 //
 
 #import "CategoryTableCell.h"
+#import "NLFColor.h"
 
 @implementation CategoryTableCell
 
@@ -14,7 +15,7 @@
 
 - (void)awakeFromNib {
     UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [UIColor colorWithRed:0.216 green:0.278 blue:0.31 alpha:1];
+    bgColorView.backgroundColor = [NLFColor backgroundBlack];
     self.selectedBackgroundView = bgColorView;
 }
 
