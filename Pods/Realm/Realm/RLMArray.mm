@@ -392,7 +392,7 @@ static void RLMValidateArrayBounds(__unsafe_unretained RLMArray *const ar,
             break;
         }
     }
-    
+
     // Remove last comma and newline characters
     if(self.count > 0)
         [mString deleteCharactersInRange:NSMakeRange(mString.length-2, 2)];

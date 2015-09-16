@@ -550,7 +550,7 @@ static RLMAccessorCode accessorCodeForType(char objcTypeCode, RLMPropertyType rl
                 case RLMPropertyTypeDate: return RLMAccessorCodeDate;
                 case RLMPropertyTypeData: return RLMAccessorCodeData;
                 case RLMPropertyTypeAny: return RLMAccessorCodeAny;
-                    
+
                 // throw for all primitive types
                 case RLMPropertyTypeBool:
                 case RLMPropertyTypeDouble:
@@ -615,7 +615,7 @@ static Class RLMCreateAccessorClass(Class objectClass,
     if (!RLMIsKindOfClass(objectClass, RLMObjectBase.class)) {
         @throw RLMException(@"objectClass must derive from RLMObject or Object");
     }
-    
+
     // create and register proxy class which derives from object class
     NSString *accessorClassName = [accessorClassPrefix stringByAppendingString:schema.className];
     Class accClass = objc_getClass(accessorClassName.UTF8String);
@@ -623,7 +623,7 @@ static Class RLMCreateAccessorClass(Class objectClass,
         accClass = objc_allocateClassPair(objectClass, accessorClassName.UTF8String, 0);
         objc_registerClassPair(accClass);
     }
-    
+
     // override getters/setters for each propery
     for (unsigned int propNum = 0; propNum < schema.properties.count; propNum++) {
         RLMProperty *prop = schema.properties[propNum];
@@ -641,7 +641,7 @@ static Class RLMCreateAccessorClass(Class objectClass,
             }
         }
     }
-    
+
     // implement className for accessor to return base className
     RLMReplaceClassNameMethod(accClass, schema.className);
     RLMReplaceShouldIncludeInDefaultSchemaMethod(accClass, false);

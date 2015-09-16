@@ -28,6 +28,12 @@ static NSString *cellIdentifier = @"category";
     self.categories = [self.db getAllCategories];
     [self.tableView registerClass:[CategoryTableCell class] forCellReuseIdentifier:cellIdentifier];
 }
+//
+//-(void)viewWillAppear:(BOOL)animated {
+//    self.categories = [self.db getAllCategories];
+//    [self.tableView reloadData];
+//    
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
