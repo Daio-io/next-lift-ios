@@ -1,20 +1,20 @@
 //
-//  AddCategoryViewController.m
+//  AddMuscleGroupViewController.m
 //  NextLift
 //
 //  Created by Dai Williams on 16/09/2015.
 //  Copyright (c) 2015 daio. All rights reserved.
 //
 
-#import "AddCategoryViewController.h"
+#import "AddMuscleGroupViewController.h"
 #import "NLFDatabase.h"
 #import "NLFDatabaseFactory.h"
 
-@interface AddCategoryViewController ()
+@interface AddMuscleGroupViewController ()
 @property (nonatomic, strong) NLFDatabase *db;
 @end
 
-@implementation AddCategoryViewController
+@implementation AddMuscleGroupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,15 +26,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addCategoryButton:(id)sender {
+- (void)addGroupButtonClicked:(id)sender {
 
-    if (self.addCategoryField.text.length > 0) {
-        NLFMuscleGroup *muscleGroup = [NLFMuscleGroup new];
-        muscleGroup.name = _addCategoryField.text;
-        [_db addMuscleGroup:muscleGroup];
+    if (self.addGroupField.text.length > 0) {
+        [self addMuscleGroup:_addGroupField.text];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 
+}
+
+#pragma mark - Internal
+
+- (void)addMuscleGroup:(NSString *)groupName {
+    NLFMuscleGroup *muscleGroup = [NLFMuscleGroup new];
+    muscleGroup.name = groupName;
+    [_db addMuscleGroup:muscleGroup];
 }
 
 @end

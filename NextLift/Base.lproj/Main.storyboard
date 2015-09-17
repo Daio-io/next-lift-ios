@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K00-yD-qBo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K00-yD-qBo">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Muscle Groups-->
@@ -34,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="1373" y="195"/>
         </scene>
-        <!--Add Category View Controller-->
+        <!--Add Muscle Group View Controller-->
         <scene sceneID="vLw-3p-hlg">
             <objects>
-                <viewController id="WPs-fd-h9o" customClass="AddCategoryViewController" sceneMemberID="viewController">
+                <viewController id="WPs-fd-h9o" customClass="AddMuscleGroupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jhT-NH-4Wd"/>
                         <viewControllerLayoutGuide type="bottom" id="kNW-ix-RSo"/>
@@ -59,7 +60,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCategoryButton:" destination="WPs-fd-h9o" eventType="touchUpInside" id="4YZ-MF-QZt"/>
+                                    <action selector="addGroupButtonClicked:" destination="WPs-fd-h9o" eventType="touchUpInside" id="cqE-Ee-5YZ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ysf-nE-Yio">
@@ -135,7 +136,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="addCategoryField" destination="Ysf-nE-Yio" id="YmV-kX-61f"/>
+                        <outlet property="addGroupField" destination="Ysf-nE-Yio" id="vtv-yk-STE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imD-qG-Idf" userLabel="First Responder" sceneMemberID="firstResponder"/>
