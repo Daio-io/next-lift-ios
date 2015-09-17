@@ -26,6 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Internal
+
+- (void)addMuscleGroup:(NSString *)groupName {
+    NLFMuscleGroup *muscleGroup = [NLFMuscleGroup new];
+    muscleGroup.name = groupName;
+    [_db addMuscleGroup:muscleGroup];
+}
+
 - (void)addGroupButtonClicked:(id)sender {
 
     if (self.addGroupField.text.length > 0) {
@@ -33,14 +41,6 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 
-}
-
-#pragma mark - Internal
-
-- (void)addMuscleGroup:(NSString *)groupName {
-    NLFMuscleGroup *muscleGroup = [NLFMuscleGroup new];
-    muscleGroup.name = groupName;
-    [_db addMuscleGroup:muscleGroup];
 }
 
 @end
