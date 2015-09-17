@@ -9,6 +9,7 @@
 #import "CategoryViewController.h"
 #import "NLFDatabaseFactory.h"
 #import "CategoryTableCell.h"
+#import "ExercisesViewController.h"
 
 @interface CategoryViewController ()
 
@@ -65,6 +66,8 @@ static NSString *cellIdentifier = @"category";
     NLFMuscleGroup *bodyCategory = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
 
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+    ExercisesViewController *exerciseViewController = [[ExercisesViewController alloc] initWithTitle:bodyCategory.name];
+    [self.navigationController pushViewController:exerciseViewController animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

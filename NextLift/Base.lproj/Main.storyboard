@@ -35,6 +35,36 @@
             </objects>
             <point key="canvasLocation" x="1373" y="195"/>
         </scene>
+        <!--Exercises View Controller-->
+        <scene sceneID="QPS-EK-7m6">
+            <objects>
+                <tableViewController storyboardIdentifier="exerciseViewController" id="Zkx-t2-m1F" customClass="ExercisesViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MA4-Io-uaN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="GUe-KD-BA8">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="Jj4-QX-su2">
+                                    <barButtonItem key="rightBarButtonItem" title="Add" id="d7Q-Kg-1FZ"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <connections>
+                            <outlet property="dataSource" destination="Zkx-t2-m1F" id="BMN-oA-q0k"/>
+                            <outlet property="delegate" destination="Zkx-t2-m1F" id="b72-sg-vug"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="exerciseNavBar" destination="Jj4-QX-su2" id="9dt-rA-wBM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJW-RN-jSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344" y="890"/>
+        </scene>
         <!--Add Muscle Group View Controller-->
         <scene sceneID="vLw-3p-hlg">
             <objects>

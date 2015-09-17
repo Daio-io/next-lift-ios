@@ -12,6 +12,7 @@
 		576B400A1B9F953400B9D296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576B40081B9F953400B9D296 /* Main.storyboard */; };
 		576B401B1B9F953400B9D296 /* NextLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B401A1B9F953400B9D296 /* NextLiftTests.m */; };
 		577DF7201BAA111D00E7B7C9 /* AddMuscleGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577DF71F1BAA111D00E7B7C9 /* AddMuscleGroupViewController.m */; };
+		57D1C0761BAB57740000DF37 /* ExercisesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D1C0751BAB57740000DF37 /* ExercisesViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6D7217C990EC6EC9258F82DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9241613C211B28BF8D14E4 /* libPods.a */; };
 		BA88B92F7175442FE9FD8992 /* NLFExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BFE56463F85FD0001B39 /* NLFExercise.m */; };
 		BA88BA7719CA7B3EC70D868E /* NLFDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B27A69F6AD47032221C2 /* NLFDatabase.m */; };
@@ -47,6 +48,8 @@
 		576B401A1B9F953400B9D296 /* NextLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextLiftTests.m; sourceTree = "<group>"; };
 		577DF71E1BAA111D00E7B7C9 /* AddMuscleGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMuscleGroupViewController.h; sourceTree = "<group>"; };
 		577DF71F1BAA111D00E7B7C9 /* AddMuscleGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMuscleGroupViewController.m; sourceTree = "<group>"; };
+		57D1C0741BAB57740000DF37 /* ExercisesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisesViewController.h; sourceTree = "<group>"; };
+		57D1C0751BAB57740000DF37 /* ExercisesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisesViewController.m; sourceTree = "<group>"; };
 		6058FAF29D7829664B0D844C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		98309EBDAE26E0F0A112B016 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BA88B125901291F56FA46E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				BA88B45D6F0A52D714C88567 /* CategoryViewController.h */,
 				577DF71E1BAA111D00E7B7C9 /* AddMuscleGroupViewController.h */,
 				577DF71F1BAA111D00E7B7C9 /* AddMuscleGroupViewController.m */,
+				57D1C0741BAB57740000DF37 /* ExercisesViewController.h */,
+				57D1C0751BAB57740000DF37 /* ExercisesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 			files = (
 				576B40041B9F953400B9D296 /* AppDelegate.m in Sources */,
 				576B40011B9F953400B9D296 /* main.m in Sources */,
+				57D1C0761BAB57740000DF37 /* ExercisesViewController.m in Sources */,
 				BA88B92F7175442FE9FD8992 /* NLFExercise.m in Sources */,
 				BA88BA7719CA7B3EC70D868E /* NLFDatabase.m in Sources */,
 				BA88BDB1BAF30493052BCF36 /* NLFDatabaseFactory.m in Sources */,
