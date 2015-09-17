@@ -28,12 +28,6 @@ static NSString *cellIdentifier = @"category";
     self.categories = [self.db getAllCategories];
     [self.tableView registerClass:[CategoryTableCell class] forCellReuseIdentifier:cellIdentifier];
 }
-//
-//-(void)viewWillAppear:(BOOL)animated {
-//    self.categories = [self.db getAllCategories];
-//    [self.tableView reloadData];
-//    
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -70,7 +64,6 @@ static NSString *cellIdentifier = @"category";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NLFMuscleGroup *bodyCategory = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
 
-    NSLog(@"Clicked %@", bodyCategory.name);
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
@@ -78,14 +71,5 @@ static NSString *cellIdentifier = @"category";
     return 56;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
