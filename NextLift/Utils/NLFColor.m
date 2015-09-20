@@ -13,7 +13,7 @@
 }
 
 + (UIColor *)textGreen {
-    return [[UIColor colorWithRed:0 green:0.749 blue:0.647 alpha:1];
+    return [UIColor colorWithRed:0 green:0.749 blue:0.647 alpha:1];
 }
 
 @end

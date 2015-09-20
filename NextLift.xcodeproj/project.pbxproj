@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		576B40011B9F953400B9D296 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B40001B9F953400B9D296 /* main.m */; };
 		576B40041B9F953400B9D296 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B40031B9F953400B9D296 /* AppDelegate.m */; };
-		576B400A1B9F953400B9D296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576B40081B9F953400B9D296 /* Main.storyboard */; };
 		576B401B1B9F953400B9D296 /* NextLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B401A1B9F953400B9D296 /* NextLiftTests.m */; };
 		577DF7201BAA111D00E7B7C9 /* AddMuscleGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577DF71F1BAA111D00E7B7C9 /* AddMuscleGroupViewController.m */; };
 		57D1C0761BAB57740000DF37 /* ExercisesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D1C0751BAB57740000DF37 /* ExercisesViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -22,6 +21,7 @@
 		BA88BD46AB3D647F5CD5DCC5 /* NLFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BF57744577168FB04FC9 /* NLFColor.m */; };
 		BA88BDA7F20B5A60D64583B7 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BD1D695ABD7321C99973 /* CategoryViewController.m */; };
 		BA88BDB1BAF30493052BCF36 /* NLFDatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */; };
+		BA88BDB7748328988E829088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA88B0816EBC670F9F71F17D /* Main.storyboard */; };
 		BA88BDCD39FE3A6D50964B1F /* CategoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA88B83760B6887B7CC24497 /* CategoryTableCell.xib */; };
 		BA88BE6EC269E0FD371D22DC /* NLFMuscleGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BF46D126F208297E3E8D /* NLFMuscleGroup.m */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		576B40001B9F953400B9D296 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		576B40021B9F953400B9D296 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		576B40031B9F953400B9D296 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		576B40091B9F953400B9D296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		576B40141B9F953400B9D296 /* NextLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		576B40191B9F953400B9D296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576B401A1B9F953400B9D296 /* NextLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextLiftTests.m; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		BA88B3810347E2747FF8BFA5 /* CategoryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableCell.m; sourceTree = "<group>"; };
 		BA88B45D6F0A52D714C88567 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		BA88B5679C786CFA6A59B89E /* NLFMuscleGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFMuscleGroup.h; path = models/NLFMuscleGroup.h; sourceTree = "<group>"; };
+		BA88B746262150B99BB3214C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = NextLift/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		BA88B83760B6887B7CC24497 /* CategoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableCell.xib; sourceTree = "<group>"; };
 		BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLFDatabaseFactory.m; path = Stores/NLFDatabaseFactory.m; sourceTree = "<group>"; };
 		BA88BB59C41EEB92173EC7E9 /* NLFDatabaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLFDatabaseFactory.h; path = Stores/NLFDatabaseFactory.h; sourceTree = "<group>"; };
@@ -130,9 +130,9 @@
 				57DA6AEE1BA7646B007B9EC7 /* Models */,
 				576B40021B9F953400B9D296 /* AppDelegate.h */,
 				576B40031B9F953400B9D296 /* AppDelegate.m */,
-				576B40081B9F953400B9D296 /* Main.storyboard */,
 				576B3FFE1B9F953400B9D296 /* Supporting Files */,
 				BA88B9F0CB95F6D5D13FC13E /* Utils */,
+				BA88B4AF5A3D9FD62799C2F7 /* Storyboards */,
 			);
 			path = NextLift;
 			sourceTree = "<group>";
@@ -222,6 +222,14 @@
 				CF9241613C211B28BF8D14E4 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA88B4AF5A3D9FD62799C2F7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BA88B0816EBC670F9F71F17D /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		BA88B6FE1278ADCA02C32A53 /* Views */ = {
@@ -325,10 +333,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576B400A1B9F953400B9D296 /* Main.storyboard in Resources */,
 				BA88BDCD39FE3A6D50964B1F /* CategoryTableCell.xib in Resources */,
 				BA88BCD23E67E84E8F20CEB5 /* Images.xcassets in Resources */,
 				BA88BC98E47B56B3BCA15E16 /* LaunchScreen.xib in Resources */,
+				BA88BDB7748328988E829088 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,10 +420,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		576B40081B9F953400B9D296 /* Main.storyboard */ = {
+		BA88B0816EBC670F9F71F17D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				576B40091B9F953400B9D296 /* Base */,
+				BA88B746262150B99BB3214C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
