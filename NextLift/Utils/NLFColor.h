@@ -9,5 +9,6 @@
 @interface NLFColor : NSObject
 
 +(UIColor *)backgroundBlack;
++(UIColor *)backgroundSelectedBlack;
 
 @end

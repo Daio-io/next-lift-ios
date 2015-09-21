@@ -15,7 +15,7 @@
 
 - (void)awakeFromNib {
     UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [NLFColor backgroundBlack];
+    bgColorView.backgroundColor = [NLFColor backgroundSelectedBlack];
     self.selectedBackgroundView = bgColorView;
 }
 

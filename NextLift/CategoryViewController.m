@@ -10,6 +10,7 @@
 #import "NLFDatabaseFactory.h"
 #import "CategoryTableCell.h"
 #import "ExercisesViewController.h"
+#import "NLFColor.h"
 
 @interface CategoryViewController ()
 
@@ -28,6 +29,7 @@ static NSString *cellIdentifier = @"category";
     [self.db addConsumer:self];
     self.categories = [self.db getAllCategories];
     [self.tableView registerClass:[CategoryTableCell class] forCellReuseIdentifier:cellIdentifier];
+    self.tableView.backgroundColor = [NLFColor backgroundBlack];
 }
 
 - (void)didReceiveMemoryWarning {
