@@ -9,6 +9,7 @@
 #import "ExercisesViewController.h"
 #import "NLFDatabaseFactory.h"
 #import "CategoryTableCell.h"
+#import "NLFColor.h"
 
 @interface ExercisesViewController ()
 @property(nonatomic, strong) NLFDatabase *db;
@@ -35,6 +36,7 @@ static NSString *cellIdentifier = @"exercise";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:[CategoryTableCell class] forCellReuseIdentifier:cellIdentifier];
+    self.tableView.backgroundColor = [NLFColor backgroundBlack];
 }
 
 - (void)didReceiveMemoryWarning {
