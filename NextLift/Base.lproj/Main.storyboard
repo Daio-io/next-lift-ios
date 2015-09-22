@@ -133,6 +133,30 @@
             </objects>
             <point key="canvasLocation" x="2102" y="195"/>
         </scene>
+        <!--Muscle Groups View Controller-->
+        <scene sceneID="N6l-fV-NAO">
+            <objects>
+                <collectionViewController id="b8p-WL-qOe" customClass="MuscleGroupsViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Dr1-47-bt7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OY7-Xd-Apt">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="b8p-WL-qOe" id="PMi-PH-gg4"/>
+                            <outlet property="delegate" destination="b8p-WL-qOe" id="tcO-2D-ge7"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8I-FC-WfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101" y="902"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bjg-id-bTu">
             <objects>
