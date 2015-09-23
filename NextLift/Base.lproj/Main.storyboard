@@ -33,7 +33,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPb-Rj-kTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373" y="195"/>
+            <point key="canvasLocation" x="1375" y="-103"/>
         </scene>
         <!--Exercises View Controller-->
         <scene sceneID="QPS-EK-7m6">
@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="2102" y="195"/>
         </scene>
-        <!--Muscle Groups View Controller-->
+        <!--Muscle Group View Controller-->
         <scene sceneID="N6l-fV-NAO">
             <objects>
-                <collectionViewController id="b8p-WL-qOe" customClass="MuscleGroupsViewController" sceneMemberID="viewController">
+                <collectionViewController id="b8p-WL-qOe" customClass="MuscleGroupViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Dr1-47-bt7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
