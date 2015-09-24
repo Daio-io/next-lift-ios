@@ -13,5 +13,6 @@
 @property (nonatomic, weak) IBOutlet UITextField *addGroupField;
 
 - (IBAction)addGroupButtonClicked:(id)sender;
+- (IBAction)cancelButton:(id)sender;
 
 @end

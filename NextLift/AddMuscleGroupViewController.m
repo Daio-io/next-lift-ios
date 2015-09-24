@@ -40,7 +40,10 @@
         [self addMuscleGroup:_addGroupField.text];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+}
 
+- (void)cancelButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

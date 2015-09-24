@@ -19,15 +19,15 @@
 
 @implementation MuscleGroupViewController
 
-static NSString * const reuseIdentifier = @"Group";
+static NSString *const reuseIdentifier = @"MuscleGroupCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.db = [NLFDatabaseFactory getInstance];
     [self.db addConsumer:self];
     self.categories = [self.db getAllCategories];
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
+    UINib *cellNib = [UINib nibWithNibName:reuseIdentifier bundle:nil];
+    [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:reuseIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,15 +35,18 @@ static NSString * const reuseIdentifier = @"Group";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)addMuscleGroup:(id)sender
+{
+    
 }
-*/
+
+#pragma mark - <NLFDatabaseDelegate>
+
+- (void)categoryAdded
+{
+    self.categories = [self.db getAllCategories];
+    [self.collectionView reloadData];
+}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -57,12 +60,17 @@ static NSString * const reuseIdentifier = @"Group";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NLFMuscleGroup *muscleGroup = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MuscleGroupCell" owner:self options:nil];
-    MuscleGroupCell *cell = nib[0];
 
+    MuscleGroupCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    NLFMuscleGroup *muscleGroup = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
     cell.groupName.text = muscleGroup.name;
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    return CGSizeMake(100, 100);
+
 }
 
 #pragma mark <UICollectionViewDelegate>

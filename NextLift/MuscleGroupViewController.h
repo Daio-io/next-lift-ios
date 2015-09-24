@@ -11,4 +11,6 @@
 
 @interface MuscleGroupViewController : UICollectionViewController <NLFDatabaseDelegate>
 
+- (IBAction)addMuscleGroup:(id)sender;
+
 @end

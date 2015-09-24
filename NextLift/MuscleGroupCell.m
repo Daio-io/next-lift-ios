@@ -17,6 +17,7 @@
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [NLFColor backgroundSelectedBlack];
     self.selectedBackgroundView = bgColorView;
+    [self sizeToFit];
 }
 
 @end
