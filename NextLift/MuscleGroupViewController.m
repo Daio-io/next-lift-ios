@@ -9,6 +9,7 @@
 #import "MuscleGroupViewController.h"
 #import "NLFDatabaseFactory.h"
 #import "MuscleGroupCell.h"
+#import "ExercisesViewController.h"
 
 @interface MuscleGroupViewController ()
 
@@ -28,6 +29,7 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
     self.categories = [self.db getAllCategories];
     UINib *cellNib = [UINib nibWithNibName:reuseIdentifier bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:reuseIdentifier];
+    self.collectionView set
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +69,9 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
     return cell;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     return CGSizeMake(100, 100);
 
@@ -75,17 +79,21 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
 
 #pragma mark <UICollectionViewDelegate>
 
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NLFMuscleGroup *group = [self.categories objectAtIndex:indexPath.row];
+
+    ExercisesViewController *exercisesViewController = [[ExercisesViewController alloc] initWithTitle:group.name];
+    [self.navigationController pushViewController:exercisesViewController animated:YES];
+    return YES;
+}
+
+// Uncomment this method to specify if the specified item should be selected
+
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
 	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
 }
 */
 

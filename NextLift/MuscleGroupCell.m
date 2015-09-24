@@ -20,4 +20,8 @@
     [self sizeToFit];
 }
 
+- (void)setSelected:(BOOL)selected {
+
+}
+
 @end
