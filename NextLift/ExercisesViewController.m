@@ -8,8 +8,8 @@
 
 #import "ExercisesViewController.h"
 #import "NLFDatabaseFactory.h"
-#import "CategoryTableCell.h"
 #import "NLFColor.h"
+#import "MuscleGroupCell.h"
 
 @interface ExercisesViewController ()
 @property(nonatomic, strong) NLFDatabase *db;
@@ -35,7 +35,7 @@ static NSString *cellIdentifier = @"exercise";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerClass:[CategoryTableCell class] forCellReuseIdentifier:cellIdentifier];
+    [self.tableView registerClass:[NLFMuscleGroup class] forCellReuseIdentifier:cellIdentifier];
     self.tableView.backgroundColor = [NLFColor backgroundBlack];
 }
 
@@ -59,9 +59,9 @@ static NSString *cellIdentifier = @"exercise";
     
     NLFExercise *exercise = [self.exercises objectAtIndex:(NSUInteger) indexPath.row];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoryTableCell" owner:self options:nil];
-    CategoryTableCell *cell = nib[0];
+    MuscleGroupCell *cell = nib[0];
     
-    cell.nameLabel.text = exercise.name;
+    cell.groupName.text = exercise.name;
     
     return cell;
 }

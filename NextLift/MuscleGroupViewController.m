@@ -29,7 +29,6 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
     self.categories = [self.db getAllCategories];
     UINib *cellNib = [UINib nibWithNibName:reuseIdentifier bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:reuseIdentifier];
-    self.collectionView set
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,12 +72,11 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    return CGSizeMake(100, 100);
+    return CGSizeMake(collectionViewLayout.collectionView.frame.size.width, 50);
 
 }
 
 #pragma mark <UICollectionViewDelegate>
-
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NLFMuscleGroup *group = [self.categories objectAtIndex:indexPath.row];
