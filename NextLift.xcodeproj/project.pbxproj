@@ -296,6 +296,7 @@
 		576B3FF31B9F953400B9D296 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = NLF;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = daio;
 				TargetAttributes = {
