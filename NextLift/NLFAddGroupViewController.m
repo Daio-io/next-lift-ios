@@ -1,20 +1,20 @@
 //
-//  AddMuscleGroupViewController.m
+//  NLFAddGroupViewController.m
 //  NextLift
 //
 //  Created by Dai Williams on 16/09/2015.
 //  Copyright (c) 2015 daio. All rights reserved.
 //
 
-#import "AddMuscleGroupViewController.h"
+#import "NLFAddGroupViewController.h"
 #import "NLFDatabase.h"
 #import "NLFDatabaseFactory.h"
 
-@interface AddMuscleGroupViewController ()
+@interface NLFAddGroupViewController ()
 @property (nonatomic, strong) NLFDatabase *db;
 @end
 
-@implementation AddMuscleGroupViewController
+@implementation NLFAddGroupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

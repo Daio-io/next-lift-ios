@@ -8,7 +8,7 @@
 
 #import "NLFExerciseViewController.h"
 #import "NLFDatabaseFactory.h"
-#import "MuscleGroupCell.h"
+#import "NLFCollectionCell.h"
 #import "NLFColor.h"
 
 @interface NLFExerciseViewController ()
@@ -19,7 +19,7 @@
 
 @implementation NLFExerciseViewController
 
-static NSString *const reuseIdentifier = @"MuscleGroupCell";
+static NSString *const reuseIdentifier = @"NLFCollectionCell";
 
 - (instancetype)initWithName:(NSString *)name {
 
@@ -36,7 +36,7 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.collectionView registerClass:[MuscleGroupCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[NLFCollectionCell class] forCellWithReuseIdentifier:reuseIdentifier];
     self.collectionView.backgroundColor = [NLFColor backgroundWhite];
     [self.collectionView sizeToFit];
 }
@@ -68,7 +68,7 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    MuscleGroupCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    NLFCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     NLFExercise *exercise = [self.exercises objectAtIndex:(NSUInteger) indexPath.row];
     NSLog(@"%@", exercise);
     cell.groupName.text = exercise.name;

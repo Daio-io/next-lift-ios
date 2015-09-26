@@ -1,5 +1,5 @@
 //
-//  MuscleGroupCell.h
+//  NLFCollectionCell.h
 //  NextLift
 //
 //  Created by Dai Williams on 23/09/2015.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MuscleGroupCell : UICollectionViewCell
+@interface NLFCollectionCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *groupName;
 

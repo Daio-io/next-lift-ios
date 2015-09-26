@@ -11,11 +11,10 @@
 		576B40011B9F953400B9D296 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B40001B9F953400B9D296 /* main.m */; };
 		576B40041B9F953400B9D296 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B40031B9F953400B9D296 /* AppDelegate.m */; };
 		576B401B1B9F953400B9D296 /* NextLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B401A1B9F953400B9D296 /* NextLiftTests.m */; };
-		577D43311BB1CE7600695F3C /* MuscleGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577D43301BB1CE7600695F3C /* MuscleGroupViewController.m */; settings = {ASSET_TAGS = (); }; };
-		577DF7201BAA111D00E7B7C9 /* AddMuscleGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577DF71F1BAA111D00E7B7C9 /* AddMuscleGroupViewController.m */; };
-		57924F2A1BB35EB700ECAB99 /* MuscleGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57924F291BB35EB700ECAB99 /* MuscleGroupCell.xib */; settings = {ASSET_TAGS = (); }; };
-		57924F2D1BB35F0D00ECAB99 /* MuscleGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57924F2C1BB35F0D00ECAB99 /* MuscleGroupCell.m */; settings = {ASSET_TAGS = (); }; };
-		57D1C0761BAB57740000DF37 /* ExercisesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D1C0751BAB57740000DF37 /* ExercisesViewController.m */; settings = {ASSET_TAGS = (); }; };
+		577D43311BB1CE7600695F3C /* NLFMuscleGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577D43301BB1CE7600695F3C /* NLFMuscleGroupViewController.m */; settings = {ASSET_TAGS = (); }; };
+		577DF7201BAA111D00E7B7C9 /* NLFAddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577DF71F1BAA111D00E7B7C9 /* NLFAddGroupViewController.m */; };
+		57924F2A1BB35EB700ECAB99 /* NLFCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57924F291BB35EB700ECAB99 /* NLFCollectionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		57924F2D1BB35F0D00ECAB99 /* NLFCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57924F2C1BB35F0D00ECAB99 /* NLFCollectionCell.m */; settings = {ASSET_TAGS = (); }; };
 		6D7217C990EC6EC9258F82DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9241613C211B28BF8D14E4 /* libPods.a */; };
 		BA88B92F7175442FE9FD8992 /* NLFExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BFE56463F85FD0001B39 /* NLFExercise.m */; };
 		BA88BA7719CA7B3EC70D868E /* NLFDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B27A69F6AD47032221C2 /* NLFDatabase.m */; };
@@ -48,15 +47,13 @@
 		576B40141B9F953400B9D296 /* NextLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		576B40191B9F953400B9D296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576B401A1B9F953400B9D296 /* NextLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextLiftTests.m; sourceTree = "<group>"; };
-		577D432F1BB1CE7600695F3C /* MuscleGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuscleGroupViewController.h; sourceTree = "<group>"; };
-		577D43301BB1CE7600695F3C /* MuscleGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuscleGroupViewController.m; sourceTree = "<group>"; };
-		577DF71E1BAA111D00E7B7C9 /* AddMuscleGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMuscleGroupViewController.h; sourceTree = "<group>"; };
-		577DF71F1BAA111D00E7B7C9 /* AddMuscleGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMuscleGroupViewController.m; sourceTree = "<group>"; };
-		57924F291BB35EB700ECAB99 /* MuscleGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MuscleGroupCell.xib; sourceTree = "<group>"; };
-		57924F2B1BB35F0D00ECAB99 /* MuscleGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuscleGroupCell.h; sourceTree = "<group>"; };
-		57924F2C1BB35F0D00ECAB99 /* MuscleGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuscleGroupCell.m; sourceTree = "<group>"; };
-		57D1C0741BAB57740000DF37 /* ExercisesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisesViewController.h; sourceTree = "<group>"; };
-		57D1C0751BAB57740000DF37 /* ExercisesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisesViewController.m; sourceTree = "<group>"; };
+		577D432F1BB1CE7600695F3C /* NLFMuscleGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLFMuscleGroupViewController.h; sourceTree = "<group>"; };
+		577D43301BB1CE7600695F3C /* NLFMuscleGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLFMuscleGroupViewController.m; sourceTree = "<group>"; };
+		577DF71E1BAA111D00E7B7C9 /* NLFAddGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLFAddGroupViewController.h; sourceTree = "<group>"; };
+		577DF71F1BAA111D00E7B7C9 /* NLFAddGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLFAddGroupViewController.m; sourceTree = "<group>"; };
+		57924F291BB35EB700ECAB99 /* NLFCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NLFCollectionCell.xib; sourceTree = "<group>"; };
+		57924F2B1BB35F0D00ECAB99 /* NLFCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLFCollectionCell.h; sourceTree = "<group>"; };
+		57924F2C1BB35F0D00ECAB99 /* NLFCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLFCollectionCell.m; sourceTree = "<group>"; };
 		6058FAF29D7829664B0D844C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		98309EBDAE26E0F0A112B016 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BA88B125901291F56FA46E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -191,8 +188,8 @@
 		57EDFA2A1BA8BF0E000FB51A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				57924F2B1BB35F0D00ECAB99 /* MuscleGroupCell.h */,
-				57924F2C1BB35F0D00ECAB99 /* MuscleGroupCell.m */,
+				57924F2B1BB35F0D00ECAB99 /* NLFCollectionCell.h */,
+				57924F2C1BB35F0D00ECAB99 /* NLFCollectionCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -200,12 +197,10 @@
 		57EDFA2B1BA8BF7C000FB51A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				577DF71E1BAA111D00E7B7C9 /* AddMuscleGroupViewController.h */,
-				577DF71F1BAA111D00E7B7C9 /* AddMuscleGroupViewController.m */,
-				57D1C0741BAB57740000DF37 /* ExercisesViewController.h */,
-				57D1C0751BAB57740000DF37 /* ExercisesViewController.m */,
-				577D432F1BB1CE7600695F3C /* MuscleGroupViewController.h */,
-				577D43301BB1CE7600695F3C /* MuscleGroupViewController.m */,
+				577DF71E1BAA111D00E7B7C9 /* NLFAddGroupViewController.h */,
+				577DF71F1BAA111D00E7B7C9 /* NLFAddGroupViewController.m */,
+				577D432F1BB1CE7600695F3C /* NLFMuscleGroupViewController.h */,
+				577D43301BB1CE7600695F3C /* NLFMuscleGroupViewController.m */,
 				574DEAD61BB67F240027CE5B /* NLFExerciseViewController.h */,
 				574DEAD71BB67F240027CE5B /* NLFExerciseViewController.m */,
 			);
@@ -241,7 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				BA88BC6D3AB28DB5E8919BDC /* LaunchScreen.xib */,
-				57924F291BB35EB700ECAB99 /* MuscleGroupCell.xib */,
+				57924F291BB35EB700ECAB99 /* NLFCollectionCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -339,7 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57924F2A1BB35EB700ECAB99 /* MuscleGroupCell.xib in Resources */,
+				57924F2A1BB35EB700ECAB99 /* NLFCollectionCell.xib in Resources */,
 				BA88BCD23E67E84E8F20CEB5 /* Images.xcassets in Resources */,
 				BA88BC98E47B56B3BCA15E16 /* LaunchScreen.xib in Resources */,
 				BA88BDB7748328988E829088 /* Main.storyboard in Resources */,
@@ -395,15 +390,14 @@
 			files = (
 				576B40041B9F953400B9D296 /* AppDelegate.m in Sources */,
 				576B40011B9F953400B9D296 /* main.m in Sources */,
-				57D1C0761BAB57740000DF37 /* ExercisesViewController.m in Sources */,
 				BA88B92F7175442FE9FD8992 /* NLFExercise.m in Sources */,
 				BA88BA7719CA7B3EC70D868E /* NLFDatabase.m in Sources */,
 				BA88BDB1BAF30493052BCF36 /* NLFDatabaseFactory.m in Sources */,
 				BA88BE6EC269E0FD371D22DC /* NLFMuscleGroup.m in Sources */,
-				577D43311BB1CE7600695F3C /* MuscleGroupViewController.m in Sources */,
-				57924F2D1BB35F0D00ECAB99 /* MuscleGroupCell.m in Sources */,
+				577D43311BB1CE7600695F3C /* NLFMuscleGroupViewController.m in Sources */,
+				57924F2D1BB35F0D00ECAB99 /* NLFCollectionCell.m in Sources */,
 				574DEAD81BB67F240027CE5B /* NLFExerciseViewController.m in Sources */,
-				577DF7201BAA111D00E7B7C9 /* AddMuscleGroupViewController.m in Sources */,
+				577DF7201BAA111D00E7B7C9 /* NLFAddGroupViewController.m in Sources */,
 				BA88BD46AB3D647F5CD5DCC5 /* NLFColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

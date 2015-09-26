@@ -6,43 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Exercises View Controller-->
-        <scene sceneID="QPS-EK-7m6">
-            <objects>
-                <tableViewController storyboardIdentifier="exerciseViewController" id="Zkx-t2-m1F" customClass="ExercisesViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MA4-Io-uaN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="separatorColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexTrackingBackgroundColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="GUe-KD-BA8">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Title" id="Jj4-QX-su2">
-                                    <barButtonItem key="rightBarButtonItem" title="Add" id="d7Q-Kg-1FZ"/>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
-                        <connections>
-                            <outlet property="dataSource" destination="Zkx-t2-m1F" id="BMN-oA-q0k"/>
-                            <outlet property="delegate" destination="Zkx-t2-m1F" id="b72-sg-vug"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="exerciseNavBar" destination="Jj4-QX-su2" id="9dt-rA-wBM"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zJW-RN-jSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="690" y="896"/>
-        </scene>
-        <!--Add Muscle Group View Controller-->
+        <!--Add Group View Controller-->
         <scene sceneID="vLw-3p-hlg">
             <objects>
-                <viewController id="WPs-fd-h9o" customClass="AddMuscleGroupViewController" sceneMemberID="viewController">
+                <viewController id="WPs-fd-h9o" customClass="NLFAddGroupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jhT-NH-4Wd"/>
                         <viewControllerLayoutGuide type="bottom" id="kNW-ix-RSo"/>
@@ -121,7 +88,7 @@
         <!--Muscle Groups-->
         <scene sceneID="N6l-fV-NAO">
             <objects>
-                <collectionViewController id="b8p-WL-qOe" customClass="MuscleGroupViewController" sceneMemberID="viewController">
+                <collectionViewController id="b8p-WL-qOe" customClass="NLFMuscleGroupViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Dr1-47-bt7">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -1,27 +1,27 @@
 //
-//  MuscleGroupViewController.m
+//  NLFMuscleGroupViewController.m
 //  NextLift
 //
 //  Created by Dai Williams on 22/09/2015.
 //  Copyright © 2015 daio. All rights reserved.
 //
 
-#import "MuscleGroupViewController.h"
+#import "NLFMuscleGroupViewController.h"
 #import "NLFDatabaseFactory.h"
-#import "MuscleGroupCell.h"
+#import "NLFCollectionCell.h"
 #import "NLFExerciseViewController.h"
 #import "NLFColor.h"
 
-@interface MuscleGroupViewController ()
+@interface NLFMuscleGroupViewController ()
 
 @property(nonatomic, strong) NLFDatabase *db;
 @property(nonatomic, strong) RLMResults *categories;
 
 @end
 
-@implementation MuscleGroupViewController
+@implementation NLFMuscleGroupViewController
 
-static NSString *const reuseIdentifier = @"MuscleGroupCell";
+static NSString *const reuseIdentifier = @"NLFCollectionCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -65,7 +65,7 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    MuscleGroupCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    NLFCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     NLFMuscleGroup *muscleGroup = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
     cell.groupName.text = muscleGroup.name;
     return cell;

@@ -1,15 +1,15 @@
 //
-//  MuscleGroupCell.m
+//  NLFCollectionCell.m
 //  NextLift
 //
 //  Created by Dai Williams on 23/09/2015.
 //  Copyright © 2015 daio. All rights reserved.
 //
 
-#import "MuscleGroupCell.h"
+#import "NLFCollectionCell.h"
 #import "NLFColor.h"
 
-@implementation MuscleGroupCell
+@implementation NLFCollectionCell
 
 @synthesize groupName = _groupName;
 

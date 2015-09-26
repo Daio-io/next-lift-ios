@@ -1,5 +1,5 @@
 //
-//  MuscleGroupViewController.h
+//  NLFMuscleGroupViewController.h
 //  NextLift
 //
 //  Created by Dai Williams on 22/09/2015.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NLFDatabase.h"
 
-@interface MuscleGroupViewController : UICollectionViewController <NLFDatabaseDelegate>
+@interface NLFMuscleGroupViewController : UICollectionViewController <NLFDatabaseDelegate>
 
 - (IBAction)addMuscleGroup:(id)sender;
 
