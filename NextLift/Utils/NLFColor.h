@@ -10,5 +10,7 @@
 
 +(UIColor *)backgroundBlack;
 +(UIColor *)backgroundSelectedBlack;
++(UIColor *)backgroundWhite;
++(UIColor *)textGreen;
 
 @end

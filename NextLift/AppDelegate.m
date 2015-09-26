@@ -19,6 +19,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
+    NLFDatabase *db = [NLFDatabaseFactory getInstance];
+    NLFExercise *exer = [NLFExercise new];
+
+    exer.group = @"Back";
+    exer.name = @"Pull Up";
+    exer.weight = 25;
+    exer.sets = 3;
+    exer.reps = 12;
+    exer.unit = @"KG";
+
+    [db addExercise:exer];
+
     return YES;
 }
 

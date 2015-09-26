@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		574DEAD81BB67F240027CE5B /* NLFExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 574DEAD71BB67F240027CE5B /* NLFExerciseViewController.m */; settings = {ASSET_TAGS = (); }; };
 		576B40011B9F953400B9D296 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B40001B9F953400B9D296 /* main.m */; };
 		576B40041B9F953400B9D296 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B40031B9F953400B9D296 /* AppDelegate.m */; };
 		576B401B1B9F953400B9D296 /* NextLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B401A1B9F953400B9D296 /* NextLiftTests.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		574DEAD61BB67F240027CE5B /* NLFExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLFExerciseViewController.h; sourceTree = "<group>"; };
+		574DEAD71BB67F240027CE5B /* NLFExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLFExerciseViewController.m; sourceTree = "<group>"; };
 		576B3FFB1B9F953400B9D296 /* NextLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		576B3FFF1B9F953400B9D296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576B40001B9F953400B9D296 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				57D1C0751BAB57740000DF37 /* ExercisesViewController.m */,
 				577D432F1BB1CE7600695F3C /* MuscleGroupViewController.h */,
 				577D43301BB1CE7600695F3C /* MuscleGroupViewController.m */,
+				574DEAD61BB67F240027CE5B /* NLFExerciseViewController.h */,
+				574DEAD71BB67F240027CE5B /* NLFExerciseViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				BA88BE6EC269E0FD371D22DC /* NLFMuscleGroup.m in Sources */,
 				577D43311BB1CE7600695F3C /* MuscleGroupViewController.m in Sources */,
 				57924F2D1BB35F0D00ECAB99 /* MuscleGroupCell.m in Sources */,
+				574DEAD81BB67F240027CE5B /* NLFExerciseViewController.m in Sources */,
 				577DF7201BAA111D00E7B7C9 /* AddMuscleGroupViewController.m in Sources */,
 				BA88BD46AB3D647F5CD5DCC5 /* NLFColor.m in Sources */,
 			);

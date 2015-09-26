@@ -9,7 +9,8 @@
 #import "MuscleGroupViewController.h"
 #import "NLFDatabaseFactory.h"
 #import "MuscleGroupCell.h"
-#import "ExercisesViewController.h"
+#import "NLFExerciseViewController.h"
+#import "NLFColor.h"
 
 @interface MuscleGroupViewController ()
 
@@ -24,6 +25,8 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.collectionView.backgroundColor = [NLFColor backgroundWhite];
+
     self.db = [NLFDatabaseFactory getInstance];
     [self.db addConsumer:self];
     self.categories = [self.db getAllCategories];
@@ -62,7 +65,7 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    MuscleGroupCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    MuscleGroupCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     NLFMuscleGroup *muscleGroup = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
     cell.groupName.text = muscleGroup.name;
     return cell;
@@ -79,9 +82,9 @@ static NSString *const reuseIdentifier = @"MuscleGroupCell";
 #pragma mark <UICollectionViewDelegate>
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NLFMuscleGroup *group = [self.categories objectAtIndex:indexPath.row];
+    NLFMuscleGroup *group = [self.categories objectAtIndex:(NSUInteger) indexPath.row];
 
-    ExercisesViewController *exercisesViewController = [[ExercisesViewController alloc] initWithTitle:group.name];
+    NLFExerciseViewController *exercisesViewController = [[NLFExerciseViewController alloc] initWithName:group.name];
     [self.navigationController pushViewController:exercisesViewController animated:YES];
     return YES;
 }

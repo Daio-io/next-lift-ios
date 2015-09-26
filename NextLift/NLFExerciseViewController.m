@@ -1,0 +1,118 @@
+//
+//  NLFExerciseViewController.m
+//  NextLift
+//
+//  Created by Dai Williams on 26/09/2015.
+//  Copyright © 2015 daio. All rights reserved.
+//
+
+#import "NLFExerciseViewController.h"
+#import "NLFDatabaseFactory.h"
+#import "MuscleGroupCell.h"
+#import "NLFColor.h"
+
+@interface NLFExerciseViewController ()
+@property (nonatomic, strong) NSString *exerciseName;
+@property (nonatomic, strong) NLFDatabase *db;
+@property(nonatomic, strong) RLMResults *exercises;
+@end
+
+@implementation NLFExerciseViewController
+
+static NSString *const reuseIdentifier = @"MuscleGroupCell";
+
+- (instancetype)initWithName:(NSString *)name {
+
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+
+    if (self = [super initWithCollectionViewLayout:flowLayout]) {
+        self.exerciseName = name;
+        self.db = [NLFDatabaseFactory getInstance];
+        self.exercises = [self.db getAllExercisesForMuscleGroup:self.exerciseName];
+    }
+    return self;
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.collectionView registerClass:[MuscleGroupCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.collectionView.backgroundColor = [NLFColor backgroundWhite];
+    [self.collectionView sizeToFit];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+#pragma mark <UICollectionViewDataSource>
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.exercises.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    MuscleGroupCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    NLFExercise *exercise = [self.exercises objectAtIndex:(NSUInteger) indexPath.row];
+    NSLog(@"%@", exercise);
+    cell.groupName.text = exercise.name;
+
+    return cell;
+}
+
+//- (CGSize)collectionView:(UICollectionView *)collectionView
+//                  layout:(UICollectionViewLayout *)collectionViewLayout
+//  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    return CGSizeMake(self.collectionView.frame.size.width, 50);
+//
+//}
+
+#pragma mark <UICollectionViewDelegate>
+
+/*
+// Uncomment this method to specify if the specified item should be highlighted during tracking
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+	return YES;
+}
+*/
+
+/*
+// Uncomment this method to specify if the specified item should be selected
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+*/
+
+/*
+// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
+	return NO;
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+	return NO;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+	
+}
+*/
+
+@end
