@@ -11,5 +11,5 @@ dependencies: \
   /Users/willid98/playground/next-lift-ios/Pods/Headers/Public/Realm/Realm/RLMObjectBase.h \
   /Users/willid98/playground/next-lift-ios/NextLift/Models/NLFMuscleGroup.h \
   /Users/willid98/playground/next-lift-ios/NextLift/Stores/NLFDatabaseFactory.h \
-  /Users/willid98/playground/next-lift-ios/NextLift/CategoryTableCell.h \
-  /Users/willid98/playground/next-lift-ios/NextLift/Utils/NLFColor.h
+  /Users/willid98/playground/next-lift-ios/NextLift/Utils/NLFColor.h \
+  /Users/willid98/playground/next-lift-ios/NextLift/MuscleGroupCell.h
