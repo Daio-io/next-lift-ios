@@ -36,9 +36,10 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.collectionView registerClass:[NLFCollectionCell class] forCellWithReuseIdentifier:reuseIdentifier];
     self.collectionView.backgroundColor = [NLFColor backgroundWhite];
     [self.collectionView sizeToFit];
+    UINib *cellNib = [UINib nibWithNibName:reuseIdentifier bundle:nil];
+    [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:reuseIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,7 +62,6 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.exercises.count;
 }
@@ -70,19 +70,18 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
 
     NLFCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     NLFExercise *exercise = [self.exercises objectAtIndex:(NSUInteger) indexPath.row];
-    NSLog(@"%@", exercise);
     cell.groupName.text = exercise.name;
 
     return cell;
 }
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView
-//                  layout:(UICollectionViewLayout *)collectionViewLayout
-//  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//
-//    return CGSizeMake(self.collectionView.frame.size.width, 50);
-//
-//}
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    return CGSizeMake(collectionView.frame.size.width, 50);
+
+}
 
 #pragma mark <UICollectionViewDelegate>
 
