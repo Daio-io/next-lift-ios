@@ -6,21 +6,24 @@
 #import <Realm/realm/RLMRealm.h>
 #import "NLFDatabase.h"
 
-@implementation NLFDatabase {
-    RLMRealm *realm;
-    NSMutableArray *consumers;
-}
+
+@interface NLFDatabase()
+@property (nonatomic, strong) RLMRealm *realm;
+@property (nonatomic, strong) NSHashTable *consumers;
+@end
+
+@implementation NLFDatabase
 
 - (instancetype)initWithRealm:(RLMRealm *)rlmRealm {
     if (self = [super init]) {
-        realm = rlmRealm;
-        consumers = [NSMutableArray new];
+        _realm = rlmRealm;
+        _consumers = [NSHashTable weakObjectsHashTable];
     }
     return self;
 }
 
 - (void)addConsumer:(id <NLFDatabaseDelegate>)consumer {
-    [consumers addObject:consumer];
+    [self.consumers addObject:consumer];
 }
 
 #pragma mark - NLFDatabase
@@ -42,10 +45,10 @@
 }
 
 - (void)addExercise:(NLFExercise *)exerciseModel {
-    [realm transactionWithBlock:^{
-        [realm addOrUpdateObject:exerciseModel];
+    [self.realm transactionWithBlock:^{
+        [self.realm addOrUpdateObject:exerciseModel];
     }];
-    for (id<NLFDatabaseDelegate> consumer in consumers) {
+    for (id<NLFDatabaseDelegate> consumer in self.consumers) {
         if([consumer respondsToSelector:@selector(exerciseAdded)]){
             [consumer exerciseAdded];
         }
@@ -53,10 +56,10 @@
 }
 
 - (void)addMuscleGroup:(NLFMuscleGroup *)muscleGroup {
-    [realm transactionWithBlock:^{
-        [realm addOrUpdateObject:muscleGroup];
+    [self.realm transactionWithBlock:^{
+        [self.realm addOrUpdateObject:muscleGroup];
     }];
-    for (id<NLFDatabaseDelegate> consumer in consumers) {
+    for (id<NLFDatabaseDelegate> consumer in self.consumers) {
         if([consumer respondsToSelector:@selector(categoryAdded)]){
             [consumer categoryAdded];;
         }
