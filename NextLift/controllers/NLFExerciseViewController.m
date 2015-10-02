@@ -29,10 +29,10 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
         self.exerciseName = name;
         self.db = [NLFDatabaseFactory getInstance];
         self.exercises = [self.db getAllExercisesForMuscleGroup:self.exerciseName];
+        [self navigationBarInit];
     }
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +44,27 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - internal
+
+- (void)navigationBarInit
+{
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add"
+                                                                  style:UIBarButtonItemStylePlain
+                                                                 target:self
+                                                                 action:@selector(addExercisePopOver)];
+    addButton.tintColor = [NLFColor backgroundBlack];
+
+    self.navigationItem.title = self.exerciseName;
+
+    self.navigationItem.rightBarButtonItem = addButton;
+}
+
+- (void)addExercisePopOver
+{
+    NSLog(@"clicked");
+
 }
 
 #pragma mark <UICollectionViewDataSource>
