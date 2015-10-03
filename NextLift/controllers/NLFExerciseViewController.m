@@ -10,9 +10,10 @@
 #import "NLFDatabaseFactory.h"
 #import "NLFCollectionCell.h"
 #import "NLFColor.h"
+#import "NLFAddExerciseViewController.h"
 
 @interface NLFExerciseViewController ()
-@property (nonatomic, strong) NSString *exerciseName;
+@property (nonatomic, strong) NSString *groupName;
 @property (nonatomic, strong) NLFDatabase *db;
 @property(nonatomic, strong) RLMResults *exercises;
 @end
@@ -26,9 +27,9 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
 
     if (self = [super initWithCollectionViewLayout:flowLayout]) {
-        self.exerciseName = name;
+        _groupName = name;
         self.db = [NLFDatabaseFactory getInstance];
-        self.exercises = [self.db getAllExercisesForMuscleGroup:self.exerciseName];
+        self.exercises = [self.db getAllExercisesForMuscleGroup:self.groupName];
         [self navigationBarInit];
     }
     return self;
@@ -56,15 +57,17 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
                                                                  action:@selector(addExercisePopOver)];
     addButton.tintColor = [NLFColor backgroundBlack];
 
-    self.navigationItem.title = self.exerciseName;
+    self.navigationItem.title = self.groupName;
 
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)addExercisePopOver
 {
-    NSLog(@"clicked");
+    NLFAddExerciseViewController *addExerciseViewController
+            = [[NLFAddExerciseViewController alloc] initWithGroupName:self.groupName];
 
+    [self.navigationController presentViewController:addExerciseViewController animated:YES completion:nil];
 }
 
 #pragma mark <UICollectionViewDataSource>
