@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NLFDatabase.h"
 
-@interface NLFExerciseViewController : UICollectionViewController
+@interface NLFExerciseViewController : UICollectionViewController <NLFDatabaseDelegate>
 
 - (instancetype)initWithName:(NSString *)name;
+
 
 @end

@@ -12,7 +12,6 @@
 
 @interface NLFAddExerciseViewController ()
 @property (nonatomic, strong) NLFDatabase *db;
-@property (nonatomic, strong) NSString *groupName;
 @end
 
 @implementation NLFAddExerciseViewController
@@ -20,14 +19,14 @@
 - (instancetype)initWithGroupName:(NSString *)groupName {
     if (self = [super init]) {
         _groupName = groupName;
-        _db = [NLFDatabaseFactory getInstance];
+        
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.db = [NLFDatabaseFactory getInstance];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,21 +44,24 @@
     exercise.weight = 0;
     exercise.reps = 0;
     exercise.group = self.groupName;
-    [_db addExercise:exercise];
+    [self.db addExercise:exercise];
+    
 }
 
-- (void)addButtonClicked:(id)sender
-{
 
+- (IBAction)addButtonClicked:(id)sender
+{
     if (self.addExerciseField.text.length > 0) {
         [self addExercise:_addExerciseField.text];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+  
 }
 
-- (void)cancelButton:(id)sender
+- (IBAction)cancelButton:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 

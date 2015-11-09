@@ -11,6 +11,7 @@
 @interface NLFAddExerciseViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UITextField *addExerciseField;
+@property (nonatomic, strong) NSString *groupName;
 
 - (instancetype)initWithGroupName:(NSString *)groupName;
 

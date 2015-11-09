@@ -10,10 +10,10 @@
 		576B40011B9F953400B9D296 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B40001B9F953400B9D296 /* main.m */; };
 		576B40041B9F953400B9D296 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B40031B9F953400B9D296 /* AppDelegate.m */; };
 		576B401B1B9F953400B9D296 /* NextLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B401A1B9F953400B9D296 /* NextLiftTests.m */; };
-		576D8A9B1BC0123A00688113 /* NLFAddExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 576D8A9A1BC0123A00688113 /* NLFAddExerciseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		57924F2A1BB35EB700ECAB99 /* NLFCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57924F291BB35EB700ECAB99 /* NLFCollectionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		576D8A9B1BC0123A00688113 /* NLFAddExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 576D8A9A1BC0123A00688113 /* NLFAddExerciseViewController.m */; };
+		57924F2A1BB35EB700ECAB99 /* NLFCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57924F291BB35EB700ECAB99 /* NLFCollectionCell.xib */; };
 		6D7217C990EC6EC9258F82DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9241613C211B28BF8D14E4 /* libPods.a */; };
-		BA88B130D5F3D7E73F54D105 /* NLFCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BEEB5DC6BE264E5626B8 /* NLFCollectionCell.m */; settings = {ASSET_TAGS = (); }; };
+		BA88B130D5F3D7E73F54D105 /* NLFCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BEEB5DC6BE264E5626B8 /* NLFCollectionCell.m */; };
 		BA88B92F7175442FE9FD8992 /* NLFExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BFE56463F85FD0001B39 /* NLFExercise.m */; };
 		BA88BA7719CA7B3EC70D868E /* NLFDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B27A69F6AD47032221C2 /* NLFDatabase.m */; };
 		BA88BC98E47B56B3BCA15E16 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA88BC6D3AB28DB5E8919BDC /* LaunchScreen.xib */; };
@@ -21,9 +21,9 @@
 		BA88BD46AB3D647F5CD5DCC5 /* NLFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BF57744577168FB04FC9 /* NLFColor.m */; };
 		BA88BDB1BAF30493052BCF36 /* NLFDatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BAE8C9B1A6692319A070 /* NLFDatabaseFactory.m */; };
 		BA88BDB7748328988E829088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA88B0816EBC670F9F71F17D /* Main.storyboard */; };
-		BA88BDCEF93C72C9E111D1B6 /* NLFExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B3F8DC846BA5A17CEA98 /* NLFExerciseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BA88BDCEF93C72C9E111D1B6 /* NLFExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B3F8DC846BA5A17CEA98 /* NLFExerciseViewController.m */; };
 		BA88BE6EC269E0FD371D22DC /* NLFMuscleGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88BF46D126F208297E3E8D /* NLFMuscleGroup.m */; };
-		BA88BEA0A63F5D6A8DB5F4B9 /* NLFMuscleGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B664D7C5770145CBF4CD /* NLFMuscleGroupViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BA88BEA0A63F5D6A8DB5F4B9 /* NLFMuscleGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B664D7C5770145CBF4CD /* NLFMuscleGroupViewController.m */; };
 		BA88BEC22E0454E068E14E6C /* NLFAddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA88B0B45BD7977261D0B872 /* NLFAddGroupViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -267,6 +267,7 @@
 				576B3FF81B9F953400B9D296 /* Frameworks */,
 				576B3FF91B9F953400B9D296 /* Resources */,
 				F38444C1B5AB9668B1260B3A /* Copy Pods Resources */,
+				7758089A7F293A7E060CCAE3 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,6 +357,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7758089A7F293A7E060CCAE3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B177F5D5EA7602219429FC03 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

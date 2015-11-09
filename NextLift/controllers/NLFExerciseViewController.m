@@ -27,10 +27,14 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
 
     if (self = [super initWithCollectionViewLayout:flowLayout]) {
-        _groupName = name;
         self.db = [NLFDatabaseFactory getInstance];
+        self.groupName = name;
+        
         self.exercises = [self.db getAllExercisesForMuscleGroup:self.groupName];
         [self navigationBarInit];
+        
+        [self.db addConsumer:self];
+        
     }
     return self;
 }
@@ -46,6 +50,17 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+#pragma mark - <NLFDatabaseDelegate>
+
+- (void)exerciseAdded
+{
+    self.exercises = [self.db getAllExercisesForMuscleGroup:self.groupName];
+    NSLog(@"here %@", self.exercises);
+    
+    [self.collectionView reloadData];
+}
+
 
 #pragma mark - internal
 
@@ -64,10 +79,16 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
 
 - (void)addExercisePopOver
 {
-    NLFAddExerciseViewController *addExerciseViewController
-            = [[NLFAddExerciseViewController alloc] initWithGroupName:self.groupName];
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                             bundle: nil];
+    
+    
+    NLFAddExerciseViewController *controller = (NLFAddExerciseViewController*)[mainStoryboard
+                                                                               instantiateViewControllerWithIdentifier: @"addEX"];
+    controller.groupName = self.groupName;
 
-    [self.navigationController presentViewController:addExerciseViewController animated:YES completion:nil];
+    [self.navigationController presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -84,6 +105,7 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
 
     NLFCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     NLFExercise *exercise = [self.exercises objectAtIndex:(NSUInteger) indexPath.row];
+    NSLog(@"%@", exercise.name);
     cell.groupName.text = exercise.name;
 
     return cell;
@@ -99,33 +121,9 @@ static NSString *const reuseIdentifier = @"NLFCollectionCell";
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-
-// Uncomment this method to specify if the specified item should be selected
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
 
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

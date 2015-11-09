@@ -23,7 +23,10 @@
 }
 
 - (void)addConsumer:(id <NLFDatabaseDelegate>)consumer {
+    
     [self.consumers addObject:consumer];
+    NSLog(@"here %@", self.consumers);
+    
 }
 
 #pragma mark - NLFDatabase
@@ -45,10 +48,13 @@
 }
 
 - (void)addExercise:(NLFExercise *)exerciseModel {
+    
     [self.realm transactionWithBlock:^{
         [self.realm addOrUpdateObject:exerciseModel];
     }];
     for (id<NLFDatabaseDelegate> consumer in self.consumers) {
+        NSLog(@"here %@", consumer);
+        
         if([consumer respondsToSelector:@selector(exerciseAdded)]){
             [consumer exerciseAdded];
         }
